@@ -1,0 +1,76 @@
+Build a Node.js monitoring service that watches a Paylogic resale page and sends Telegram alerts when tickets become available.
+
+STACK
+- Node.js 20+
+- Playwright (chromium, headless) — page is JS-rendered
+- node-cron
+- dotenv
+- No other runtime deps (use native fetch for Telegram API)
+
+ENVIRONMENT VARIABLES (.env)
+TELEGRAM_BOT_TOKEN=
+TELEGRAM_CHAT_ID=
+TARGET_URL=https://resale.paylogic.com/9710ed9ee7304fa29ece85758d0b61da/
+CHECK_INTERVAL_CRON=* * * * *
+NOTIFY_ON_SOLD_OUT=false
+
+BEHAVIOR
+1. On startup: run one immediate check, then schedule via node-cron using CHECK_INTERVAL_CRON.
+2. Each check:
+   - Launch headless Chromium, navigate to TARGET_URL, wait for networkidle.
+   - Find the "Verfügbar" value: locate any element whose text contains "Verfügbar" (case-insensitive, German), then extract the associated numeric value from the nearest sibling/cell/adjacent node. Implement a robust selector that tries:
+     a) table row where a cell contains "Verfügbar" → read other numeric cell
+     b) any element with "Verfügbar" label → read adjacent number
+   - Parse value to integer. If parsing fails, treat as error (not as 0).
+   - Log: ISO timestamp, parsed value, change status.
+3. State:
+   - Persist last known integer value in ./state.json: { lastValue: number, lastCheck: ISO, consecutiveErrors: number }
+   - Send Telegram alert when value transitions from 0 to >0.
+   - If NOTIFY_ON_SOLD_OUT=true, also alert on transition from >0 to 0.
+   - Do NOT alert if value unchanged.
+   - Do NOT alert on first run — only record baseline.
+4. Errors:
+   - On scraping/parse error: increment consecutiveErrors, log, continue.
+   - After 5 consecutive errors: send one Telegram error alert, reset counter to avoid spam.
+   - Always close browser in finally block.
+
+TELEGRAM MESSAGES
+Available:
+🎟️ Tickets verfügbar!
+Anzahl: <value>
+Link: <TARGET_URL>
+Zeit: <ISO>
+
+Sold out (optional):
+❌ Wieder ausverkauft
+Link: <TARGET_URL>
+
+Error (after 5 fails):
+⚠️ Monitor-Fehler seit <N> Checks
+Letzter Fehler: <message>
+
+FILES
+- package.json with scripts: "start": "node index.js"
+- index.js — entry, loads env, schedules cron, runs initial check
+- checker.js — exports async checkAvailability(url) → returns integer or throws
+- telegram.js — exports async sendMessage(text) using native fetch to Telegram Bot API
+- state.js — read/write ./state.json with safe defaults
+- .env.example with all variables (no real values)
+- .gitignore (node_modules, .env, state.json, playwright browser cache)
+- README.md — install, configure, deploy via PM2 on Ubuntu
+- ecosystem.config.js — PM2 config, name "paylogic-monitor", autorestart, max_memory_restart 500M
+
+README MUST INCLUDE
+- Telegram bot setup steps (BotFather, getUpdates for chat ID)
+- Install: npm ci && npx playwright install --with-deps chromium
+- Run: pm2 start ecosystem.config.js && pm2 save && pm2 startup
+- Logs: pm2 logs paylogic-monitor
+- How to change interval in .env
+
+CONSTRAINTS
+- No secrets in code or repo
+- Code must be clean, single-purpose modules, ES modules ("type": "module")
+- Reuse a single browser instance across checks if possible to reduce overhead — launch once, create new context/page per check, close context after each check, close browser only on SIGTERM/SIGINT
+- Graceful shutdown on SIGINT/SIGTERM
+
+After generating, run one test check against the live URL and print the parsed "Verfügbar" value to confirm the selector works. If it fails, dump the rendered HTML around any element containing "Verfügbar" so the selector can be adjusted.
