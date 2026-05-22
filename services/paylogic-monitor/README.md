@@ -37,6 +37,7 @@ Edit `.env` and fill in:
 | `TARGET_URL` | the Paylogic resale URL to watch |
 | `CHECK_INTERVAL_CRON` | cron expression, e.g. `* * * * *` (every minute) |
 | `NOTIFY_ON_SOLD_OUT` | `true` to also alert when value drops back to 0 |
+| `HEARTBEAT_CRON` | cron for a periodic "monitor alive" message (e.g. `0 * * * *` hourly, `0 9 * * *` daily). Empty disables it. |
 
 ## 3. Install (Ubuntu)
 
@@ -113,6 +114,29 @@ Examples:
   ```
 
 State is stored in `state.json` and survives restarts.
+
+### Heartbeat (optional)
+
+Set `HEARTBEAT_CRON` to receive a periodic "monitor alive" Telegram message.
+Leave it empty to disable. Common values:
+
+```
+HEARTBEAT_CRON=0 * * * *   # every hour, on the hour
+HEARTBEAT_CRON=0 9 * * *   # once a day at 09:00 (server time)
+```
+
+Each heartbeat looks like this:
+
+```
+💓 Monitor alive
+lastValue: <n>
+lastCheck: <iso>
+consecutiveErrors: <n>
+now: <iso>
+```
+
+Useful as a silent "the VPS / PM2 is still up" signal. If the heartbeat stops
+arriving, the monitor is no longer running.
 
 ## 7. One-off smoke test
 
