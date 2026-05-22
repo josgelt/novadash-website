@@ -1,0 +1,8 @@
+uploads = []
+generated = []
+
+[[outputs]]
+id = "KWFzG_rXFYpaSyt41KODn"
+uri = "file://paylogic-monitor.tar.gz"
+type = "unspecified"
+title = "paylogic-monitor.tar.gz"
