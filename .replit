@@ -11,6 +11,26 @@ env = { "CI" = "true" }
 [workflows]
 runButton = "Project"
 
+[[workflows.workflow]]
+name = "Project"
+mode = "parallel"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Paylogic Monitor"
+
+[[workflows.workflow]]
+name = "Paylogic Monitor"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "node services/paylogic-monitor/index.js"
+
+[workflows.workflow.metadata]
+outputType = "console"
+
 [agent]
 stack = "PNPM_WORKSPACE"
 expertMode = true
@@ -30,3 +50,13 @@ externalPort = 8081
 [[ports]]
 localPort = 21531
 externalPort = 80
+
+[nix]
+channel = "stable-25_05"
+
+[userenv]
+
+[userenv.shared]
+TARGET_URL = "https://resale.paylogic.com/9710ed9ee7304fa29ece85758d0b61da/"
+CHECK_INTERVAL_CRON = "* * * * *"
+NOTIFY_ON_SOLD_OUT = "false"
