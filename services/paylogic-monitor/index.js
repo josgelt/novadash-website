@@ -8,6 +8,7 @@ const TARGET_URL = process.env.TARGET_URL;
 const CHECK_INTERVAL_CRON = process.env.CHECK_INTERVAL_CRON || "* * * * *";
 const NOTIFY_ON_SOLD_OUT =
   String(process.env.NOTIFY_ON_SOLD_OUT || "false").toLowerCase() === "true";
+const HEARTBEAT_CRON = process.env.HEARTBEAT_CRON || "";
 const ERROR_ALERT_THRESHOLD = 5;
 
 if (!TARGET_URL) {
@@ -22,6 +23,10 @@ if (!process.env.TELEGRAM_BOT_TOKEN || !process.env.TELEGRAM_CHAT_ID) {
 }
 if (!cron.validate(CHECK_INTERVAL_CRON)) {
   console.error(`Invalid CHECK_INTERVAL_CRON: "${CHECK_INTERVAL_CRON}"`);
+  process.exit(1);
+}
+if (HEARTBEAT_CRON && !cron.validate(HEARTBEAT_CRON)) {
+  console.error(`Invalid HEARTBEAT_CRON: "${HEARTBEAT_CRON}"`);
   process.exit(1);
 }
 
@@ -109,8 +114,30 @@ async function shutdown(signal) {
 process.on("SIGINT", () => shutdown("SIGINT"));
 process.on("SIGTERM", () => shutdown("SIGTERM"));
 
+async function sendHeartbeat() {
+  const state = await readState();
+  const now = new Date().toISOString();
+  const lastValue = state.lastValue === null ? "n/a" : state.lastValue;
+  const lastCheck = state.lastCheck || "n/a";
+  const errors = state.consecutiveErrors || 0;
+  const text =
+    `💓 Monitor alive\n` +
+    `lastValue: ${lastValue}\n` +
+    `lastCheck: ${lastCheck}\n` +
+    `consecutiveErrors: ${errors}\n` +
+    `now: ${now}`;
+  try {
+    await sendMessage(text);
+    console.log(`[${now}] heartbeat sent (lastValue=${lastValue}, errors=${errors})`);
+  } catch (err) {
+    console.error(
+      `[${now}] failed to send heartbeat: ${err?.message || err}`,
+    );
+  }
+}
+
 console.log(
-  `paylogic-monitor starting. URL=${TARGET_URL} cron="${CHECK_INTERVAL_CRON}" notifySoldOut=${NOTIFY_ON_SOLD_OUT}`,
+  `paylogic-monitor starting. URL=${TARGET_URL} cron="${CHECK_INTERVAL_CRON}" notifySoldOut=${NOTIFY_ON_SOLD_OUT} heartbeatCron="${HEARTBEAT_CRON || "disabled"}"`,
 );
 
 await runCheck();
@@ -119,3 +146,11 @@ cron.schedule(CHECK_INTERVAL_CRON, () => {
     console.error("unexpected runCheck error:", err?.message || err),
   );
 });
+
+if (HEARTBEAT_CRON) {
+  cron.schedule(HEARTBEAT_CRON, () => {
+    sendHeartbeat().catch((err) =>
+      console.error("unexpected sendHeartbeat error:", err?.message || err),
+    );
+  });
+}
