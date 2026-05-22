@@ -1,0 +1,19 @@
+{
+  "name": "paylogic-monitor",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Polls a Paylogic resale page and sends Telegram alerts when tickets become available.",
+  "scripts": {
+    "start": "node index.js",
+    "smoke": "node smoke.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "node-cron": "^3.0.3",
+    "playwright": "^1.48.2"
+  }
+}
