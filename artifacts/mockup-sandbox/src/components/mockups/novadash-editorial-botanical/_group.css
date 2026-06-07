@@ -1,19 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Nunito:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Nunito:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
 
 .nd-botanical {
   --font-serif: 'Cormorant Garamond', serif;
   --font-sans: 'Nunito', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
   
-  --color-bg: #F7F5F0; /* Oat/Cream */
-  --color-bg-alt: #EFECE1; /* Slightly deeper earthy tone */
-  --color-text: #2A3129; /* Deep Olive / Charcoal */
-  --color-text-muted: #566454; /* Sage/Olive mid */
-  --color-primary: #4F6343; /* Sage / Olive */
-  --color-primary-hover: #3B4B32;
-  --color-accent: #C46D55; /* Terracotta */
-  --color-accent-hover: #B05C46;
-  --color-secondary: #3B4734; /* Dark Olive */
-  --color-border: #E0DEC8; /* Earthy border */
+  --color-bg: #F8FAF9; /* Clean ultra-light grey-green */
+  --color-bg-alt: #F1F5F2; /* Slightly deeper clean grey-green */
+  --color-text: #111814; /* Near black with green tint */
+  --color-text-muted: #4B5A52; /* Crisp mid-grey-green */
+  --color-primary: #10B981; /* Fresh Emerald / Spring Green */
+  --color-primary-hover: #059669;
+  --color-accent: #0D9488; /* Fresh Teal pop */
+  --color-accent-hover: #0F766E;
+  --color-secondary: #064E3B; /* Deep Forest Green for dark sections */
+  --color-border: #E2E8E4; /* Crisp border */
   --color-surface: #FFFFFF;
   
   font-family: var(--font-sans);
@@ -32,50 +33,54 @@
   font-family: var(--font-serif);
 }
 
+.nd-botanical .font-mono {
+  font-family: var(--font-mono);
+}
+
 .nd-botanical-btn-primary {
   background-color: var(--color-primary);
   color: white;
-  border-radius: 9999px; /* Pill shape for organic feel */
+  border-radius: 0.5rem; /* Sharper, techy radius */
   transition: all 0.3s ease;
-  font-weight: 500;
-  letter-spacing: 0.02em;
+  font-weight: 600;
+  letter-spacing: 0.01em;
 }
 
 .nd-botanical-btn-primary:hover {
   background-color: var(--color-primary-hover);
   transform: translateY(-1px);
-  box-shadow: 0 4px 14px rgba(79, 99, 67, 0.25);
+  box-shadow: 0 4px 14px rgba(16, 185, 129, 0.3);
 }
 
 .nd-botanical-btn-accent {
   background-color: var(--color-accent);
   color: white;
-  border-radius: 9999px;
+  border-radius: 0.5rem;
   transition: all 0.3s ease;
-  font-weight: 500;
-  letter-spacing: 0.02em;
+  font-weight: 600;
+  letter-spacing: 0.01em;
 }
 
 .nd-botanical-btn-accent:hover {
   background-color: var(--color-accent-hover);
   transform: translateY(-1px);
-  box-shadow: 0 4px 14px rgba(196, 109, 85, 0.25);
+  box-shadow: 0 4px 14px rgba(13, 148, 136, 0.3);
 }
 
 .nd-botanical-btn-secondary {
-  background-color: transparent;
+  background-color: var(--color-surface);
   color: var(--color-text);
   border: 1px solid var(--color-border);
-  border-radius: 9999px;
+  border-radius: 0.5rem;
   transition: all 0.3s ease;
-  font-weight: 500;
-  letter-spacing: 0.02em;
+  font-weight: 600;
+  letter-spacing: 0.01em;
 }
 
 .nd-botanical-btn-secondary:hover {
   border-color: var(--color-primary);
   color: var(--color-primary);
-  background-color: rgba(79, 99, 67, 0.04);
+  background-color: rgba(16, 185, 129, 0.05);
 }
 
 .nd-botanical-fade-up {
@@ -98,17 +103,41 @@
 .nd-botanical-card {
   background-color: var(--color-surface);
   border: 1px solid var(--color-border);
-  /* Organic asymmetric border radius */
-  border-radius: 2rem 0.75rem 2rem 0.75rem; 
+  border-radius: 0.75rem; /* Sharper */
   transition: all 0.4s ease;
+  position: relative;
+}
+
+.nd-botanical-card::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  border-radius: inherit;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px -1px rgba(0, 0, 0, 0.02);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
 }
 
 .nd-botanical-card:hover {
   border-color: var(--color-primary);
-  box-shadow: 0 12px 30px -10px rgba(79, 99, 67, 0.12);
-  transform: translateY(-4px);
+  transform: translateY(-2px);
 }
 
-.nd-botanical-leaf-shape {
-  border-radius: 4rem 1rem 4rem 1rem;
+.nd-botanical-card:hover::after {
+  opacity: 1;
+}
+
+/* Crisp dotted texture */
+.nd-botanical-dots {
+  background-image: radial-gradient(var(--color-border) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Faint grid */
+.nd-botanical-grid {
+  background-image: 
+    linear-gradient(to right, var(--color-border) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--color-border) 1px, transparent 1px);
+  background-size: 40px 40px;
 }

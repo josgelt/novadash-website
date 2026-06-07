@@ -126,6 +126,18 @@ uri = "file://artifacts/mockup-sandbox/public/images/nd-botanical-process.png"
 type = "image"
 title = "botanical shipping boxes"
 
+[[generated]]
+id = "Q5GhPvWfdmspuQSXXvTYf"
+uri = "file://artifacts/mockup-sandbox/public/images/nd-editorial-fresh-hero.png"
+type = "image"
+title = "Light green SaaS dashboard UI"
+
+[[generated]]
+id = "jwN3C7GqdaCC4wY5EL-F0"
+uri = "file://artifacts/mockup-sandbox/public/images/nd-editorial-fresh-process.png"
+type = "image"
+title = "Minimalist shipping boxes"
+
 [[outputs]]
 id = "KWFzG_rXFYpaSyt41KODn"
 uri = "file://paylogic-monitor.tar.gz"
