@@ -9,10 +9,10 @@
   --color-bg-alt: #F1F5F2; /* Slightly deeper clean grey-green */
   --color-text: #111814; /* Near black with green tint */
   --color-text-muted: #4B5A52; /* Crisp mid-grey-green */
-  --color-primary: #10B981; /* Fresh Emerald / Spring Green */
-  --color-primary-hover: #059669;
-  --color-accent: #0D9488; /* Fresh Teal pop */
-  --color-accent-hover: #0F766E;
+  --color-primary: #047857; /* Refined deep emerald — elegant, serious */
+  --color-primary-hover: #065F46;
+  --color-accent: #0F766E; /* Deep refined teal */
+  --color-accent-hover: #115E59;
   --color-secondary: #064E3B; /* Deep Forest Green for dark sections */
   --color-border: #E2E8E4; /* Crisp border */
   --color-surface: #FFFFFF;
@@ -49,7 +49,7 @@
 .nd-botanical-btn-primary:hover {
   background-color: var(--color-primary-hover);
   transform: translateY(-1px);
-  box-shadow: 0 4px 14px rgba(16, 185, 129, 0.3);
+  box-shadow: 0 4px 14px rgba(4, 120, 87, 0.22);
 }
 
 .nd-botanical-btn-accent {
@@ -64,7 +64,7 @@
 .nd-botanical-btn-accent:hover {
   background-color: var(--color-accent-hover);
   transform: translateY(-1px);
-  box-shadow: 0 4px 14px rgba(13, 148, 136, 0.3);
+  box-shadow: 0 4px 14px rgba(15, 118, 110, 0.22);
 }
 
 .nd-botanical-btn-secondary {
@@ -80,7 +80,7 @@
 .nd-botanical-btn-secondary:hover {
   border-color: var(--color-primary);
   color: var(--color-primary);
-  background-color: rgba(16, 185, 129, 0.05);
+  background-color: rgba(4, 120, 87, 0.05);
 }
 
 .nd-botanical-fade-up {
