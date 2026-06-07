@@ -54,7 +54,7 @@ npx playwright install --with-deps chromium
 
 ```bash
 npm install -g pm2          # if you don't already have PM2
-pm2 start ecosystem.config.js
+pm2 start ecosystem.config.cjs
 pm2 save
 pm2 startup                 # follow the printed command to enable on boot
 ```
