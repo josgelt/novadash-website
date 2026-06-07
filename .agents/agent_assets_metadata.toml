@@ -1,5 +1,22 @@
 uploads = []
-generated = []
+
+[[generated]]
+id = "v8C6l-0X5hEvYMLbmxx1e"
+uri = "file://artifacts/mockup-sandbox/public/images/novadash-dashboard-modern.png"
+type = "image"
+title = "SaaS dashboard mockup"
+
+[[generated]]
+id = "hN5o8Rf6auCnmphhWdGCy"
+uri = "file://artifacts/mockup-sandbox/public/images/nd-bold-hero.png"
+type = "image"
+title = "Bold B2B SaaS Dashboard UI"
+
+[[generated]]
+id = "Fe6_u5YnwHKn6W56rO-D3"
+uri = "file://artifacts/mockup-sandbox/public/images/nd-elegant-dashboard.png"
+type = "image"
+title = "elegant dark dashboard ui"
 
 [[outputs]]
 id = "KWFzG_rXFYpaSyt41KODn"
