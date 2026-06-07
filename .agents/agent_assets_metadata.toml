@@ -84,6 +84,12 @@ uri = "file://artifacts/mockup-sandbox/public/images/nd-playful-process.png"
 type = "image"
 title = "Playful shipping process bright"
 
+[[generated]]
+id = "F2o8vtAjLbwnDhtAIVeCa"
+uri = "file://artifacts/mockup-sandbox/public/images/nd-elegant-dashboard-light.png"
+type = "image"
+title = "Light mode elegant dashboard UI"
+
 [[outputs]]
 id = "KWFzG_rXFYpaSyt41KODn"
 uri = "file://paylogic-monitor.tar.gz"
