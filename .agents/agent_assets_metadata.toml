@@ -90,6 +90,42 @@ uri = "file://artifacts/mockup-sandbox/public/images/nd-elegant-dashboard-light.
 type = "image"
 title = "Light mode elegant dashboard UI"
 
+[[generated]]
+id = "_g3dYjQUlk5awTJQ6mSw4"
+uri = "file://artifacts/mockup-sandbox/public/images/nd-editorial-bold-hero.png"
+type = "image"
+title = "High contrast editorial packing"
+
+[[generated]]
+id = "e27kKs4alY74xzPrzdMov"
+uri = "file://artifacts/mockup-sandbox/public/images/nd-editorial-bold-process.png"
+type = "image"
+title = "High contrast shipping labels"
+
+[[generated]]
+id = "3qE1mzEtLQUFTpJV6PmKA"
+uri = "file://artifacts/mockup-sandbox/public/images/nd-pastel-hero.png"
+type = "image"
+title = "Pastel hero image"
+
+[[generated]]
+id = "D8wfwBZnjdiCoHFMigmZp"
+uri = "file://artifacts/mockup-sandbox/public/images/nd-botanical-hero.png"
+type = "image"
+title = "botanical e-commerce workspace"
+
+[[generated]]
+id = "hohArc2YJRx2WhqaelEd2"
+uri = "file://artifacts/mockup-sandbox/public/images/nd-pastel-process.png"
+type = "image"
+title = "Pastel process image"
+
+[[generated]]
+id = "WxHolPR-0pqKZYDhPBmzt"
+uri = "file://artifacts/mockup-sandbox/public/images/nd-botanical-process.png"
+type = "image"
+title = "botanical shipping boxes"
+
 [[outputs]]
 id = "KWFzG_rXFYpaSyt41KODn"
 uri = "file://paylogic-monitor.tar.gz"

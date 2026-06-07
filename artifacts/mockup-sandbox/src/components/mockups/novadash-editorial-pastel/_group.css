@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+.nd-pastel {
+  --font-serif: 'Cormorant Garamond', serif;
+  --font-sans: 'Quicksand', sans-serif;
+  
+  --color-bg: #FDFAF9; /* Creamy off-white */
+  --color-text: #4A4453; /* Soft deep taupe/grey */
+  --color-text-muted: #847C8F;
+  --color-primary: #E8B4B8; /* Soft blush pink */
+  --color-primary-hover: #DCA1A6;
+  --color-secondary: #B9C6D8; /* Pale sky/lavender blue */
+  --color-secondary-light: #E4EAF1;
+  --color-accent: #D7C4E0; /* Soft lilac */
+  --color-border: #F0E8EB;
+  
+  font-family: var(--font-sans);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  -webkit-font-smoothing: antialiased;
+}
+
+.nd-pastel h1,
+.nd-pastel h2,
+.nd-pastel h3,
+.nd-pastel h4,
+.nd-pastel h5,
+.nd-pastel h6,
+.nd-pastel .font-serif {
+  font-family: var(--font-serif);
+}
+
+.nd-pastel-btn-primary {
+  background-color: var(--color-primary);
+  color: #FDFAF9;
+  border-radius: 9999px;
+  transition: all 0.4s ease;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  box-shadow: 0 4px 14px rgba(232, 180, 184, 0.4);
+}
+
+.nd-pastel-btn-primary:hover {
+  background-color: var(--color-primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(232, 180, 184, 0.5);
+}
+
+.nd-pastel-btn-secondary {
+  background-color: #FDFAF9;
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  border-radius: 9999px;
+  transition: all 0.4s ease;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+.nd-pastel-btn-secondary:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary-hover);
+  box-shadow: 0 4px 14px rgba(232, 180, 184, 0.1);
+}
+
+.nd-pastel-fade-up {
+  animation: ndPastelFadeUp 1.4s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.nd-delay-100 { animation-delay: 0.1s; }
+.nd-delay-200 { animation-delay: 0.2s; }
+.nd-delay-300 { animation-delay: 0.3s; }
+
+@keyframes ndPastelFadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.nd-pastel-card {
+  background: linear-gradient(145deg, #FFFFFF 0%, #FDFAF9 100%);
+  border: 1px solid var(--color-border);
+  border-radius: 32px;
+  transition: all 0.5s ease;
+  box-shadow: 0 10px 40px -10px rgba(185, 198, 216, 0.15);
+}
+
+.nd-pastel-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 50px -15px rgba(185, 198, 216, 0.25);
+  border-color: var(--color-secondary);
+}
+
+.nd-pastel-badge {
+  background: linear-gradient(135deg, rgba(232, 180, 184, 0.15), rgba(215, 196, 224, 0.15));
+  border: 1px solid rgba(232, 180, 184, 0.3);
+  color: #C38B90;
+}

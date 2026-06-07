@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Nunito:wght@300;400;500;600&display=swap');
+
+.nd-botanical {
+  --font-serif: 'Cormorant Garamond', serif;
+  --font-sans: 'Nunito', sans-serif;
+  
+  --color-bg: #F7F5F0; /* Oat/Cream */
+  --color-bg-alt: #EFECE1; /* Slightly deeper earthy tone */
+  --color-text: #2A3129; /* Deep Olive / Charcoal */
+  --color-text-muted: #566454; /* Sage/Olive mid */
+  --color-primary: #4F6343; /* Sage / Olive */
+  --color-primary-hover: #3B4B32;
+  --color-accent: #C46D55; /* Terracotta */
+  --color-accent-hover: #B05C46;
+  --color-secondary: #3B4734; /* Dark Olive */
+  --color-border: #E0DEC8; /* Earthy border */
+  --color-surface: #FFFFFF;
+  
+  font-family: var(--font-sans);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  -webkit-font-smoothing: antialiased;
+}
+
+.nd-botanical h1,
+.nd-botanical h2,
+.nd-botanical h3,
+.nd-botanical h4,
+.nd-botanical h5,
+.nd-botanical h6,
+.nd-botanical .font-serif {
+  font-family: var(--font-serif);
+}
+
+.nd-botanical-btn-primary {
+  background-color: var(--color-primary);
+  color: white;
+  border-radius: 9999px; /* Pill shape for organic feel */
+  transition: all 0.3s ease;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.nd-botanical-btn-primary:hover {
+  background-color: var(--color-primary-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(79, 99, 67, 0.25);
+}
+
+.nd-botanical-btn-accent {
+  background-color: var(--color-accent);
+  color: white;
+  border-radius: 9999px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.nd-botanical-btn-accent:hover {
+  background-color: var(--color-accent-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(196, 109, 85, 0.25);
+}
+
+.nd-botanical-btn-secondary {
+  background-color: transparent;
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  border-radius: 9999px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.nd-botanical-btn-secondary:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  background-color: rgba(79, 99, 67, 0.04);
+}
+
+.nd-botanical-fade-up {
+  animation: ndBotFadeUp 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.nd-delay-100 { animation-delay: 0.1s; }
+.nd-delay-200 { animation-delay: 0.2s; }
+.nd-delay-300 { animation-delay: 0.3s; }
+
+@keyframes ndBotFadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.nd-botanical-card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  /* Organic asymmetric border radius */
+  border-radius: 2rem 0.75rem 2rem 0.75rem; 
+  transition: all 0.4s ease;
+}
+
+.nd-botanical-card:hover {
+  border-color: var(--color-primary);
+  box-shadow: 0 12px 30px -10px rgba(79, 99, 67, 0.12);
+  transform: translateY(-4px);
+}
+
+.nd-botanical-leaf-shape {
+  border-radius: 4rem 1rem 4rem 1rem;
+}

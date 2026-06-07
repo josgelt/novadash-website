@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+.nd-editorial-bold {
+  --font-serif: 'Playfair Display', serif;
+  --font-sans: 'Inter', sans-serif;
+  
+  --color-bg: #FFFFFF;
+  --color-text: #050505;
+  --color-text-muted: #666666;
+  --color-primary: #E60000;
+  --color-primary-hover: #000000;
+  --color-border: #050505;
+  
+  font-family: var(--font-sans);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  -webkit-font-smoothing: antialiased;
+}
+
+.nd-editorial-bold h1,
+.nd-editorial-bold h2,
+.nd-editorial-bold h3,
+.nd-editorial-bold h4,
+.nd-editorial-bold h5,
+.nd-editorial-bold h6,
+.nd-editorial-bold .font-serif {
+  font-family: var(--font-serif);
+}
+
+.nd-editorial-bold-btn-primary {
+  background-color: var(--color-primary);
+  color: #FFFFFF;
+  border: 2px solid var(--color-primary);
+  border-radius: 0;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.875rem;
+}
+
+.nd-editorial-bold-btn-primary:hover {
+  background-color: var(--color-text);
+  border-color: var(--color-text);
+  color: #FFFFFF;
+}
+
+.nd-editorial-bold-btn-secondary {
+  background-color: transparent;
+  color: var(--color-text);
+  border: 2px solid var(--color-text);
+  border-radius: 0;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.875rem;
+}
+
+.nd-editorial-bold-btn-secondary:hover {
+  background-color: var(--color-text);
+  color: #FFFFFF;
+}
+
+.nd-editorial-bold-fade-up {
+  animation: ndBoldFadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.nd-bold-delay-200 { animation-delay: 0.2s; }
+
+@keyframes ndBoldFadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.nd-editorial-bold-card {
+  background-color: #FFFFFF;
+  border: 2px solid var(--color-border);
+  border-radius: 0;
+  transition: all 0.3s ease;
+}
+
+.nd-editorial-bold-card:hover {
+  transform: translate(-6px, -6px);
+  box-shadow: 12px 12px 0px 0px var(--color-primary);
+}
