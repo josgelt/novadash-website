@@ -143,3 +143,9 @@ id = "KWFzG_rXFYpaSyt41KODn"
 uri = "file://paylogic-monitor.tar.gz"
 type = "unspecified"
 title = "paylogic-monitor.tar.gz"
+
+[[outputs]]
+id = "0eEkbEr_pNmujkWMtddp6"
+uri = "file://exports/novadash-design-system.zip"
+type = "unspecified"
+title = "NovaDash Design-System (zum Kopieren in Order-Dashboard-Manager)"
