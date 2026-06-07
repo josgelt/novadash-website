@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Quicksand:wght@300..700&display=swap');
+
+.nd-playful {
+  --font-serif: 'Fraunces', serif;
+  --font-sans: 'Quicksand', sans-serif;
+  
+  --color-bg: #FFFDF4; /* Soft butter yellow / cream */
+  --color-text: #4A3C31; /* Warm deep brown/charcoal */
+  --color-text-muted: #827366;
+  
+  --color-primary: #FF7B54; /* Warm apricot / coral */
+  --color-primary-hover: #F2623A;
+  
+  --color-secondary: #2EC4B6; /* Fresh teal pop */
+  --color-secondary-light: #CBF3F0;
+  
+  --color-border: #F5E8D8;
+  
+  font-family: var(--font-sans);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  -webkit-font-smoothing: antialiased;
+}
+
+.nd-playful h1,
+.nd-playful h2,
+.nd-playful h3,
+.nd-playful h4,
+.nd-playful h5,
+.nd-playful h6,
+.nd-playful .font-serif {
+  font-family: var(--font-serif);
+}
+
+.nd-playful-btn-primary {
+  background-color: var(--color-primary);
+  color: white;
+  border-radius: 9999px; /* Pill shape */
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  box-shadow: 0 4px 14px rgba(255, 123, 84, 0.25);
+}
+
+.nd-playful-btn-primary:hover {
+  background-color: var(--color-primary-hover);
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 6px 20px rgba(255, 123, 84, 0.35);
+}
+
+.nd-playful-btn-secondary {
+  background-color: transparent;
+  color: var(--color-text);
+  border: 2px solid var(--color-border);
+  border-radius: 9999px; /* Pill shape */
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.nd-playful-btn-secondary:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  background-color: white;
+  transform: translateY(-2px);
+}
+
+.nd-playful-fade-up {
+  animation: ndPlayfulFadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.nd-delay-100 { animation-delay: 0.1s; }
+.nd-delay-200 { animation-delay: 0.2s; }
+.nd-delay-300 { animation-delay: 0.3s; }
+
+@keyframes ndPlayfulFadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.nd-playful-card {
+  background-color: #FFFFFF;
+  border: 2px solid var(--color-border);
+  border-radius: 24px;
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.nd-playful-card:hover {
+  border-color: var(--color-secondary);
+  box-shadow: 0 12px 30px -10px rgba(46, 196, 182, 0.15);
+  transform: translateY(-4px);
+}
+
+.nd-playful-pill {
+  border-radius: 9999px;
+}
+
+/* Playful custom decorations */
+.nd-playful-blob {
+  border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+  animation: blob-bounce 8s infinite alternate;
+}
+
+@keyframes blob-bounce {
+  0% { border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; }
+  100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+}

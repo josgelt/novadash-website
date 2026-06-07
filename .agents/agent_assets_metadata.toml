@@ -48,6 +48,42 @@ uri = "file://artifacts/mockup-sandbox/public/images/novadash-console-hero-brigh
 type = "image"
 title = "Bright high-tech operations console dashboard"
 
+[[generated]]
+id = "JRcPMvYlNgyLsj7o8_6PK"
+uri = "file://artifacts/mockup-sandbox/public/images/nd-quiet-hero.png"
+type = "image"
+title = "Quiet minimal ecommerce abstract"
+
+[[generated]]
+id = "aI-npLmccimjzaaionvfz"
+uri = "file://artifacts/mockup-sandbox/public/images/nd-quiet-process.png"
+type = "image"
+title = "Quiet minimal shipping box"
+
+[[generated]]
+id = "G3KoAUYZ0m8F7al4tKKOM"
+uri = "file://artifacts/mockup-sandbox/public/images/nd-luxe-hero.png"
+type = "image"
+title = "Moody luxe ecommerce dashboard hero"
+
+[[generated]]
+id = "Cmrnj8-X2-xWVSzdymqxM"
+uri = "file://artifacts/mockup-sandbox/public/images/nd-playful-hero.png"
+type = "image"
+title = "Playful e-commerce boxes bright"
+
+[[generated]]
+id = "5YGJYYf21JkhuhMF_VX5B"
+uri = "file://artifacts/mockup-sandbox/public/images/nd-luxe-process.png"
+type = "image"
+title = "Moody luxe shipping boxes"
+
+[[generated]]
+id = "X4tyo81blP9QTpX4HaWAj"
+uri = "file://artifacts/mockup-sandbox/public/images/nd-playful-process.png"
+type = "image"
+title = "Playful shipping process bright"
+
 [[outputs]]
 id = "KWFzG_rXFYpaSyt41KODn"
 uri = "file://paylogic-monitor.tar.gz"
