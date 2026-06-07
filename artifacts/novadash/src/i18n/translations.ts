@@ -18,7 +18,12 @@ export const translations = {
       terms: "AGB",
       imprint: "Impressum",
       subProcessor: "Sub-Processor-Liste",
-      rights: "Alle Rechte vorbehalten."
+      rights: "Alle Rechte vorbehalten.",
+      product: "Produkt",
+      company: "Unternehmen",
+      legal: "Rechtliches",
+      integrations: "Integrationen",
+      tagline: "Cloud Order-Management für den DACH-Raum."
     },
     seo: {
       home: {
@@ -68,16 +73,20 @@ export const translations = {
     },
     home: {
       hero: {
-        badge: "Early Access Beta",
+        badge: "v2.0 Beta Live",
         title1: "Alle Marktplätze.",
         title2: "Eine Oberfläche.",
         subtitle: "Die cloudbasierte Order-Management-Plattform für E-Commerce im DACH-Raum. Verwalten Sie Bestellungen, Versand und Tracking automatisiert an einer zentralen Stelle.",
         cta1: "Early Access anfragen",
         cta2: "Funktionen ansehen",
-        imageAlt: "NovaDash Oberfläche"
+        imageAlt: "NovaDash Oberfläche",
+        orderId: "Order ID",
+        statusLabel: "Status",
+        statusValue: "SYNCED"
       },
-      integration: "Nahtlose Integration mit Ihren Tools",
+      integration: "Nahtlose API-Integrationen",
       problems: {
+        eyebrow: "Skalierbarkeit",
         title: "Wachsen Sie nicht aus Ihren Prozessen heraus.",
         subtitle: "Mit jedem neuen Marktplatz multipliziert sich der Verwaltungsaufwand. Was mit 10 Bestellungen am Tag funktionierte, führt bei 100 zum Systemkollaps. Zeit ist Ihr wertvollstes Gut – verschwenden Sie sie nicht mit Copy & Paste.",
         bullet1: "Kein Einloggen in 5 verschiedene Portale mehr",
@@ -91,6 +100,7 @@ export const translations = {
         ]
       },
       features: {
+        eyebrow: "Core Features",
         title1: "Alles an einem Ort.",
         title2: "Vollautomatisiert.",
         subtitle: "NovaDash ist nicht einfach ein weiteres Tool, sondern das Betriebssystem für Ihren E-Commerce-Erfolg.",
@@ -101,6 +111,7 @@ export const translations = {
         ]
       },
       trust: {
+        eyebrow: "Enterprise Security",
         badge: "Made in Germany",
         title: "Kompromisslose Sicherheit für Ihre Kundendaten.",
         subtitle: "Als Profi-Werkzeug nehmen wir Datensicherheit ernst. Keine Experimente, keine Grauzonen. NovaDash ist von Grund auf für die strengen europäischen Datenschutzstandards konzipiert.",
@@ -114,13 +125,24 @@ export const translations = {
         card2Title: "99,99 % Uptime-SLA",
         card2Desc: "Redundante Systeme"
       },
+      pricingTeaser: {
+        title: "Einfache, faire Preise",
+        subtitle: "Skalierbar mit Ihrem Volumen. Keine versteckten Kosten.",
+        badge: "Pro Plan",
+        price: "€ 49",
+        perMonth: "/ Monat",
+        cta: "Alle Pläne ansehen"
+      },
       cta: {
         title: "Bereit für effizientes Order-Management?",
+        title1: "Bereit für effizientes",
+        title2: "Order-Management?",
         subtitle: "Wir vergeben aktuell exklusive Plätze für unsere Early Access Phase. Sichern Sie sich Ihren Zugang und gestalten Sie die Zukunft des E-Commerce mit.",
         button: "Jetzt für den Early Access vormerken"
       }
     },
     features: {
+      eyebrow: "Plattform",
       title: "Funktionen",
       subtitle: "Die komplette Plattform für Ihren Versand",
       hero: "Entdecken Sie, wie NovaDash Ihre E-Commerce-Prozesse automatisiert und skaliert.",
@@ -132,6 +154,7 @@ export const translations = {
       ]
     },
     pricing: {
+      eyebrow: "Preise",
       title: "Preise",
       subtitle: "Skalierbare Pläne für jedes Volumen",
       earlyAccess: "Hinweis: Während der Early-Access-Phase gelten Sonderkonditionen.",
@@ -143,6 +166,7 @@ export const translations = {
       ]
     },
     about: {
+      eyebrow: "Über uns",
       title: "Über uns",
       subtitle: "Unsere Mission für den modernen E-Commerce",
       content: "NovaDash wurde [Gründungsjahr] in [Standort] gegründet, um eine Lücke im Markt zu schließen: Eine professionelle, sichere und performante Lösung für das Order-Management europäischer Händler.",
@@ -154,6 +178,7 @@ export const translations = {
       ]
     },
     contact: {
+      eyebrow: "Kontakt",
       title: "Kontakt",
       subtitle: "Wir sind für Sie da",
       company: "NovaDash GmbH",
@@ -222,6 +247,7 @@ export const translations = {
       }
     },
     legal: {
+      eyebrow: "Rechtliches",
       dateLabel: "Stand:",
       privacyTitle: "Datenschutzerklärung",
       termsTitle: "Allgemeine Geschäftsbedingungen",
@@ -294,6 +320,8 @@ export const translations = {
       }
     },
     notFound: {
+      eyebrow: "Fehler",
+      code: "404",
       title: "Seite nicht gefunden",
       text: "Die gesuchte Seite existiert leider nicht.",
       back: "Zurück zur Startseite"
@@ -318,7 +346,12 @@ export const translations = {
       terms: "Terms of Service",
       imprint: "Imprint",
       subProcessor: "Sub-Processors",
-      rights: "All rights reserved."
+      rights: "All rights reserved.",
+      product: "Product",
+      company: "Company",
+      legal: "Legal",
+      integrations: "Integrations",
+      tagline: "Cloud order management for the DACH region."
     },
     seo: {
       home: {
@@ -368,16 +401,20 @@ export const translations = {
     },
     home: {
       hero: {
-        badge: "Early Access Beta",
+        badge: "v2.0 Beta Live",
         title1: "All Marketplaces.",
         title2: "One Interface.",
         subtitle: "The cloud-based order management platform for E-commerce in the DACH region. Manage orders, shipping, and tracking automatically from a central location.",
         cta1: "Request Early Access",
         cta2: "View Features",
-        imageAlt: "NovaDash Interface"
+        imageAlt: "NovaDash Interface",
+        orderId: "Order ID",
+        statusLabel: "Status",
+        statusValue: "SYNCED"
       },
-      integration: "Seamless Integration with Your Tools",
+      integration: "Seamless API Integrations",
       problems: {
+        eyebrow: "Scalability",
         title: "Don't outgrow your processes.",
         subtitle: "With every new marketplace, your administrative effort multiplies. What worked for 10 orders a day leads to system collapse at 100. Time is your most valuable asset – don't waste it on copy & paste.",
         bullet1: "No more logging into 5 different portals",
@@ -391,6 +428,7 @@ export const translations = {
         ]
       },
       features: {
+        eyebrow: "Core Features",
         title1: "Everything in one place.",
         title2: "Fully automated.",
         subtitle: "NovaDash isn't just another tool, it's the operating system for your E-commerce success.",
@@ -401,6 +439,7 @@ export const translations = {
         ]
       },
       trust: {
+        eyebrow: "Enterprise Security",
         badge: "Made in Germany",
         title: "Uncompromising security for your customer data.",
         subtitle: "As a professional tool, we take data security seriously. No experiments, no gray areas. NovaDash is designed from the ground up for strict European data protection standards.",
@@ -414,13 +453,24 @@ export const translations = {
         card2Title: "99.99% Uptime SLA",
         card2Desc: "Redundant systems"
       },
+      pricingTeaser: {
+        title: "Simple, fair pricing",
+        subtitle: "Scales with your volume. No hidden costs.",
+        badge: "Pro Plan",
+        price: "€ 49",
+        perMonth: "/ month",
+        cta: "View all plans"
+      },
       cta: {
         title: "Ready for efficient order management?",
+        title1: "Ready for efficient",
+        title2: "order management?",
         subtitle: "We are currently assigning exclusive spots for our Early Access phase. Secure your access and help shape the future of E-commerce.",
         button: "Register for Early Access now"
       }
     },
     features: {
+      eyebrow: "Platform",
       title: "Features",
       subtitle: "The complete platform for your shipping",
       hero: "Discover how NovaDash automates and scales your E-commerce processes.",
@@ -432,6 +482,7 @@ export const translations = {
       ]
     },
     pricing: {
+      eyebrow: "Pricing",
       title: "Pricing",
       subtitle: "Scalable plans for every volume",
       earlyAccess: "Note: Special conditions apply during the Early Access phase.",
@@ -443,6 +494,7 @@ export const translations = {
       ]
     },
     about: {
+      eyebrow: "About",
       title: "About Us",
       subtitle: "Our mission for modern E-commerce",
       content: "NovaDash was founded in [Year] in [Location] to fill a gap in the market: A professional, secure, and high-performance solution for the order management of European merchants.",
@@ -454,6 +506,7 @@ export const translations = {
       ]
     },
     contact: {
+      eyebrow: "Contact",
       title: "Contact",
       subtitle: "We are here for you",
       company: "NovaDash GmbH",
@@ -522,6 +575,7 @@ export const translations = {
       }
     },
     legal: {
+      eyebrow: "Legal",
       dateLabel: "As of:",
       privacyTitle: "Privacy Policy",
       termsTitle: "Terms & Conditions",
@@ -594,6 +648,8 @@ export const translations = {
       }
     },
     notFound: {
+      eyebrow: "Error",
+      code: "404",
       title: "Page Not Found",
       text: "The page you are looking for does not exist.",
       back: "Back to Home"

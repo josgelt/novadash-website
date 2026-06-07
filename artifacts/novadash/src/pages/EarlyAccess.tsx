@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
-import { CheckCircle2 } from "lucide-react";
+import { CheckCircle2, Terminal } from "lucide-react";
 
 export default function EarlyAccess() {
   const { t } = useI18n();
@@ -38,116 +38,135 @@ export default function EarlyAccess() {
     setSubmitted(true);
   }
 
-  return (
-    <div className="pt-24 pb-20 min-h-screen bg-slate-50 flex flex-col">
-      <section className="flex-1 py-20 px-6 flex items-center justify-center">
-        <div className="w-full max-w-xl nd-fade-in-up">
-          <div className="text-center mb-10">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-50 border border-teal-100 text-teal-700 text-xs font-semibold tracking-wide uppercase mb-6">
-              {t("earlyAccess.badge")}
-            </div>
-            <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4 tracking-tight">
-              {t("earlyAccess.title")}
-            </h1>
-            <p className="text-lg text-slate-600">
-              {t("earlyAccess.subtitle")}
-            </p>
-          </div>
+  const inputClass =
+    "h-12 rounded-lg border-[var(--color-border)] bg-white font-sans text-[var(--color-text)] focus-visible:ring-[var(--color-primary)] focus-visible:border-[var(--color-primary)]";
+  const labelClass =
+    "text-xs font-mono font-semibold tracking-widest uppercase text-[var(--color-text-muted)]";
 
-          <div className="bg-white p-8 md:p-10 rounded-3xl border border-slate-200 shadow-xl shadow-slate-200/50">
-            {submitted ? (
-              <div className="text-center py-12">
-                <div className="w-20 h-20 bg-teal-100 text-teal-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <CheckCircle2 size={40} />
-                </div>
-                <h3 className="text-2xl font-bold text-slate-900 mb-4">{t("earlyAccess.form.successTitle")}</h3>
-                <p className="text-slate-600 mb-8">{t("earlyAccess.form.success")}</p>
-                <Button
-                  className="bg-indigo-600 hover:bg-indigo-700 text-white rounded-full px-8 py-6"
-                  onClick={() => setSubmitted(false)}
-                >
-                  {t("earlyAccess.form.newRequest")}
-                </Button>
-              </div>
-            ) : (
-              <Form {...form}>
-                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <FormField
-                      control={form.control}
-                      name="name"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel>{t("earlyAccess.form.name")}</FormLabel>
-                          <FormControl>
-                            <Input placeholder={t("earlyAccess.form.placeholders.name")} {...field} className="rounded-xl h-12" />
-                          </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
-                    <FormField
-                      control={form.control}
-                      name="email"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel>{t("earlyAccess.form.email")}</FormLabel>
-                          <FormControl>
-                            <Input placeholder={t("earlyAccess.form.placeholders.email")} {...field} className="rounded-xl h-12" />
-                          </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
-                  </div>
-                  <FormField
-                    control={form.control}
-                    name="company"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>{t("earlyAccess.form.company")}</FormLabel>
-                        <FormControl>
-                          <Input placeholder={t("earlyAccess.form.placeholders.company")} {...field} className="rounded-xl h-12" />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                  <FormField
-                    control={form.control}
-                    name="marketplaces"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>{t("earlyAccess.form.marketplaces")}</FormLabel>
-                        <FormControl>
-                          <Input placeholder={t("earlyAccess.form.placeholders.marketplaces")} {...field} className="rounded-xl h-12" />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                  <FormField
-                    control={form.control}
-                    name="message"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>{t("earlyAccess.form.message")}</FormLabel>
-                        <FormControl>
-                          <Textarea placeholder={t("earlyAccess.form.placeholders.message")} className="min-h-[100px] rounded-xl" {...field} />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                  <Button type="submit" className="w-full bg-indigo-600 hover:bg-indigo-700 text-white rounded-full py-7 text-lg font-medium shadow-lg shadow-indigo-600/20 transition-all hover:scale-[1.02]">
-                    {t("earlyAccess.form.submit")}
-                  </Button>
-                </form>
-              </Form>
-            )}
+  return (
+    <section className="pt-40 pb-24 px-6 md:px-12 relative overflow-hidden min-h-screen">
+      <div className="absolute inset-0 nd-botanical-dots opacity-50 pointer-events-none z-0"></div>
+      <div className="absolute top-[-10%] right-[-5%] w-[600px] h-[600px] bg-[var(--color-primary)] opacity-[0.06] blur-[100px] rounded-full pointer-events-none"></div>
+      <div className="absolute bottom-0 left-[-10%] w-[500px] h-[500px] bg-[var(--color-accent)] opacity-[0.05] blur-[100px] rounded-full pointer-events-none"></div>
+
+      <div className="container mx-auto max-w-2xl relative z-10">
+        <div className="text-center mb-12 nd-botanical-fade-up">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 mb-8 border border-[var(--color-primary)]/30 bg-white shadow-sm rounded text-xs font-mono font-semibold tracking-widest uppercase text-[var(--color-primary)]">
+            <Terminal size={14} className="text-[var(--color-accent)]" />
+            {t("earlyAccess.badge")}
           </div>
+          <h1 className="text-5xl md:text-6xl font-serif font-semibold text-[var(--color-text)] mb-6 leading-[1.1] tracking-tight">
+            {t("earlyAccess.title")}
+          </h1>
+          <p className="text-lg text-[var(--color-text-muted)] leading-relaxed">
+            {t("earlyAccess.subtitle")}
+          </p>
         </div>
-      </section>
-    </div>
+
+        <div className="nd-botanical-card p-8 md:p-10 nd-botanical-fade-up nd-delay-100">
+          {submitted ? (
+            <div className="text-center py-12">
+              <div className="w-16 h-16 bg-[var(--color-primary)]/10 text-[var(--color-primary)] rounded-full flex items-center justify-center mx-auto mb-6">
+                <CheckCircle2 size={36} strokeWidth={1.5} />
+              </div>
+              <h3 className="text-3xl font-serif font-semibold text-[var(--color-text)] mb-4">
+                {t("earlyAccess.form.successTitle")}
+              </h3>
+              <p className="text-[var(--color-text-muted)] leading-relaxed mb-8 max-w-md mx-auto">
+                {t("earlyAccess.form.success")}
+              </p>
+              <Button
+                className="nd-botanical-btn-secondary px-8 py-6 text-sm font-mono uppercase tracking-wide"
+                onClick={() => setSubmitted(false)}
+              >
+                {t("earlyAccess.form.newRequest")}
+              </Button>
+            </div>
+          ) : (
+            <Form {...form}>
+              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                <div className="grid md:grid-cols-2 gap-6">
+                  <FormField
+                    control={form.control}
+                    name="name"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className={labelClass}>{t("earlyAccess.form.name")}</FormLabel>
+                        <FormControl>
+                          <Input placeholder={t("earlyAccess.form.placeholders.name")} {...field} className={inputClass} />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                  <FormField
+                    control={form.control}
+                    name="email"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className={labelClass}>{t("earlyAccess.form.email")}</FormLabel>
+                        <FormControl>
+                          <Input placeholder={t("earlyAccess.form.placeholders.email")} {...field} className={inputClass} />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                </div>
+                <FormField
+                  control={form.control}
+                  name="company"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className={labelClass}>{t("earlyAccess.form.company")}</FormLabel>
+                      <FormControl>
+                        <Input placeholder={t("earlyAccess.form.placeholders.company")} {...field} className={inputClass} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name="marketplaces"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className={labelClass}>{t("earlyAccess.form.marketplaces")}</FormLabel>
+                      <FormControl>
+                        <Input placeholder={t("earlyAccess.form.placeholders.marketplaces")} {...field} className={inputClass} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name="message"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className={labelClass}>{t("earlyAccess.form.message")}</FormLabel>
+                      <FormControl>
+                        <Textarea
+                          placeholder={t("earlyAccess.form.placeholders.message")}
+                          className="min-h-[120px] rounded-lg border-[var(--color-border)] bg-white font-sans text-[var(--color-text)] focus-visible:ring-[var(--color-primary)] focus-visible:border-[var(--color-primary)]"
+                          {...field}
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <Button
+                  type="submit"
+                  className="w-full nd-botanical-btn-primary py-6 text-sm font-mono uppercase tracking-wide"
+                >
+                  {t("earlyAccess.form.submit")}
+                </Button>
+              </form>
+            </Form>
+          )}
+        </div>
+      </div>
+    </section>
   );
 }

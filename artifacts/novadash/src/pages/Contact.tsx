@@ -36,68 +36,104 @@ export default function Contact() {
     setSubmitted(true);
   }
 
+  const contactInfo = [
+    {
+      icon: MapPin,
+      accent: false,
+      label: t("contact.labels.address"),
+      value: (
+        <>
+          {t("contact.values.address")}
+          <br />
+          {t("contact.values.city")}
+        </>
+      ),
+    },
+    {
+      icon: Mail,
+      accent: true,
+      label: t("contact.labels.email"),
+      value: t("contact.values.email"),
+    },
+    {
+      icon: Phone,
+      accent: false,
+      label: t("contact.labels.phone"),
+      value: t("contact.values.phone"),
+    },
+  ];
+
   return (
-    <div className="pt-24 pb-20">
-      <section className="bg-slate-50 py-20 px-6">
-        <div className="container mx-auto max-w-4xl text-center nd-fade-in-up">
-          <h1 className="text-4xl md:text-6xl font-bold text-slate-900 mb-6 tracking-tight">
-            {t("contact.title")}
-          </h1>
-          <p className="text-xl text-slate-600">
-            {t("contact.subtitle")}
-          </p>
-        </div>
-      </section>
+    <>
+      {/* Contact Section */}
+      <section className="pt-40 pb-24 px-6 md:px-12 relative overflow-hidden">
+        <div className="absolute inset-0 nd-botanical-dots opacity-50 pointer-events-none z-0"></div>
+        <div className="absolute top-[-10%] right-[-5%] w-[600px] h-[600px] bg-[var(--color-primary)] opacity-[0.06] blur-[100px] rounded-full pointer-events-none"></div>
+        <div className="absolute bottom-0 left-[-10%] w-[500px] h-[500px] bg-[var(--color-accent)] opacity-[0.05] blur-[100px] rounded-full pointer-events-none"></div>
 
-      <section className="py-24 px-6 bg-white">
-        <div className="container mx-auto max-w-5xl">
-          <div className="grid md:grid-cols-2 gap-16">
-            <div className="nd-fade-in-up">
-              <h2 className="text-2xl font-bold text-slate-900 mb-8">{t("contact.company")}</h2>
+        <div className="container mx-auto max-w-7xl relative z-10">
+          <div className="grid lg:grid-cols-12 gap-16 items-start">
+            {/* Left: Intro + contact info */}
+            <div className="lg:col-span-5 nd-botanical-fade-up">
+              <div className="text-xs font-mono font-semibold tracking-widest uppercase text-[var(--color-primary)] mb-4">
+                {t("contact.eyebrow")}
+              </div>
+              <h1 className="text-5xl md:text-7xl font-serif font-semibold text-[var(--color-text)] mb-6 leading-[1.1] tracking-tight">
+                <span className="italic text-[var(--color-primary)]">{t("contact.title")}</span>
+              </h1>
+              <p className="text-xl text-[var(--color-text-muted)] mb-10 leading-relaxed">
+                {t("contact.subtitle")}
+              </p>
+              <div className="w-12 h-1 rounded bg-[var(--color-text)] mb-10"></div>
 
-              <div className="space-y-6">
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-full bg-slate-100 text-slate-600 flex items-center justify-center shrink-0">
-                    <MapPin size={20} />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-slate-900 mb-1">{t("contact.labels.address")}</h3>
-                    <p className="text-slate-600 leading-relaxed">{t("contact.values.address")}<br/>{t("contact.values.city")}</p>
-                  </div>
-                </div>
+              <h2 className="text-2xl font-serif font-semibold text-[var(--color-text)] mb-8">
+                {t("contact.company")}
+              </h2>
 
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-full bg-slate-100 text-slate-600 flex items-center justify-center shrink-0">
-                    <Mail size={20} />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-slate-900 mb-1">{t("contact.labels.email")}</h3>
-                    <p className="text-slate-600 leading-relaxed">{t("contact.values.email")}</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-full bg-slate-100 text-slate-600 flex items-center justify-center shrink-0">
-                    <Phone size={20} />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-slate-900 mb-1">{t("contact.labels.phone")}</h3>
-                    <p className="text-slate-600 leading-relaxed">{t("contact.values.phone")}</p>
-                  </div>
-                </div>
+              <div className="space-y-5">
+                {contactInfo.map((item, i) => {
+                  const Icon = item.icon;
+                  const color = item.accent ? "var(--color-accent)" : "var(--color-primary)";
+                  return (
+                    <div
+                      key={i}
+                      className="flex items-start gap-4 p-4 rounded-lg bg-white border border-[var(--color-border)] shadow-sm hover:border-[var(--color-primary)]/50 transition-colors"
+                    >
+                      <div
+                        className="w-12 h-12 bg-[var(--color-bg)] rounded-lg border border-[var(--color-border)] flex items-center justify-center shrink-0"
+                        style={{ color }}
+                      >
+                        <Icon size={20} strokeWidth={1.5} />
+                      </div>
+                      <div>
+                        <h3 className="text-xs font-mono font-semibold tracking-widest uppercase text-[var(--color-text-muted)] mb-1.5">
+                          {item.label}
+                        </h3>
+                        <p className="text-[var(--color-text)] font-medium leading-relaxed">
+                          {item.value}
+                        </p>
+                      </div>
+                    </div>
+                  );
+                })}
               </div>
             </div>
 
-            <div className="bg-white p-8 rounded-3xl border border-slate-200 shadow-lg shadow-slate-200/50 nd-fade-in-up nd-delay-100">
+            {/* Right: Form panel */}
+            <div className="lg:col-span-6 lg:col-start-7 nd-botanical-card p-8 md:p-10 nd-botanical-fade-up nd-delay-100">
               {submitted ? (
                 <div className="text-center py-12">
-                  <div className="w-16 h-16 bg-teal-100 text-teal-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <CheckCircle2 size={32} />
+                  <div className="w-16 h-16 bg-[var(--color-primary)]/10 text-[var(--color-primary)] rounded-lg flex items-center justify-center mx-auto mb-6 border border-[var(--color-border)]">
+                    <CheckCircle2 size={32} strokeWidth={1.5} />
                   </div>
-                  <h3 className="text-2xl font-bold text-slate-900 mb-4">{t("contact.form.successTitle")}</h3>
-                  <p className="text-slate-600">{t("contact.form.success")}</p>
+                  <h3 className="text-3xl font-serif font-semibold text-[var(--color-text)] mb-4">
+                    {t("contact.form.successTitle")}
+                  </h3>
+                  <p className="text-[var(--color-text-muted)] leading-relaxed">
+                    {t("contact.form.success")}
+                  </p>
                   <Button
-                    className="mt-8 bg-indigo-600 hover:bg-indigo-700 text-white rounded-full px-8 py-6"
+                    className="mt-8 nd-botanical-btn-primary px-8 py-6 text-sm font-mono uppercase tracking-wide"
                     onClick={() => setSubmitted(false)}
                   >
                     {t("contact.form.newMessage")}
@@ -111,9 +147,15 @@ export default function Contact() {
                       name="name"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>{t("contact.form.name")}</FormLabel>
+                          <FormLabel className="text-xs font-mono font-semibold tracking-widest uppercase text-[var(--color-text-muted)]">
+                            {t("contact.form.name")}
+                          </FormLabel>
                           <FormControl>
-                            <Input placeholder={t("contact.form.placeholders.name")} {...field} className="rounded-xl" />
+                            <Input
+                              placeholder={t("contact.form.placeholders.name")}
+                              {...field}
+                              className="rounded-lg border-[var(--color-border)] bg-white focus-visible:ring-[var(--color-primary)]"
+                            />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -124,9 +166,15 @@ export default function Contact() {
                       name="email"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>{t("contact.form.email")}</FormLabel>
+                          <FormLabel className="text-xs font-mono font-semibold tracking-widest uppercase text-[var(--color-text-muted)]">
+                            {t("contact.form.email")}
+                          </FormLabel>
                           <FormControl>
-                            <Input placeholder={t("contact.form.placeholders.email")} {...field} className="rounded-xl" />
+                            <Input
+                              placeholder={t("contact.form.placeholders.email")}
+                              {...field}
+                              className="rounded-lg border-[var(--color-border)] bg-white focus-visible:ring-[var(--color-primary)]"
+                            />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -137,9 +185,15 @@ export default function Contact() {
                       name="company"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>{t("contact.form.company")}</FormLabel>
+                          <FormLabel className="text-xs font-mono font-semibold tracking-widest uppercase text-[var(--color-text-muted)]">
+                            {t("contact.form.company")}
+                          </FormLabel>
                           <FormControl>
-                            <Input placeholder={t("contact.form.placeholders.company")} {...field} className="rounded-xl" />
+                            <Input
+                              placeholder={t("contact.form.placeholders.company")}
+                              {...field}
+                              className="rounded-lg border-[var(--color-border)] bg-white focus-visible:ring-[var(--color-primary)]"
+                            />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -150,15 +204,24 @@ export default function Contact() {
                       name="message"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>{t("contact.form.message")}</FormLabel>
+                          <FormLabel className="text-xs font-mono font-semibold tracking-widest uppercase text-[var(--color-text-muted)]">
+                            {t("contact.form.message")}
+                          </FormLabel>
                           <FormControl>
-                            <Textarea placeholder={t("contact.form.placeholders.message")} className="min-h-[120px] rounded-xl" {...field} />
+                            <Textarea
+                              placeholder={t("contact.form.placeholders.message")}
+                              className="min-h-[120px] rounded-lg border-[var(--color-border)] bg-white focus-visible:ring-[var(--color-primary)]"
+                              {...field}
+                            />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
                       )}
                     />
-                    <Button type="submit" className="w-full bg-indigo-600 hover:bg-indigo-700 text-white rounded-full py-6 text-base font-medium">
+                    <Button
+                      type="submit"
+                      className="w-full nd-botanical-btn-primary py-6 text-sm font-mono uppercase tracking-wide"
+                    >
                       {t("contact.form.submit")}
                     </Button>
                   </form>
@@ -168,6 +231,6 @@ export default function Contact() {
           </div>
         </div>
       </section>
-    </div>
+    </>
   );
 }
