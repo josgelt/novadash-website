@@ -18,6 +18,30 @@ uri = "file://artifacts/mockup-sandbox/public/images/nd-elegant-dashboard.png"
 type = "image"
 title = "elegant dark dashboard ui"
 
+[[generated]]
+id = "p4ZYeDOeEd3WQLBuSe917"
+uri = "file://artifacts/mockup-sandbox/public/images/novadash-dashboard-grid.png"
+type = "image"
+title = "Swiss grid style dashboard UI"
+
+[[generated]]
+id = "wilaQ9Gv8NfgVafIOvd6Q"
+uri = "file://artifacts/mockup-sandbox/public/images/novadash-console-hero.png"
+type = "image"
+title = "Logistics console dashboard mock"
+
+[[generated]]
+id = "82qV_pLRZllyl6olWt63J"
+uri = "file://artifacts/mockup-sandbox/public/images/nd-editorial-hero.png"
+type = "image"
+title = "Editorial business owner packing"
+
+[[generated]]
+id = "OrmfSjKicKIZMd1rJqZ00"
+uri = "file://artifacts/mockup-sandbox/public/images/nd-editorial-process.png"
+type = "image"
+title = "Editorial boxes and labels"
+
 [[outputs]]
 id = "KWFzG_rXFYpaSyt41KODn"
 uri = "file://paylogic-monitor.tar.gz"
