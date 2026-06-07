@@ -42,6 +42,12 @@ uri = "file://artifacts/mockup-sandbox/public/images/nd-editorial-process.png"
 type = "image"
 title = "Editorial boxes and labels"
 
+[[generated]]
+id = "_wwpywSTosZifZubPkYf6"
+uri = "file://artifacts/mockup-sandbox/public/images/novadash-console-hero-bright.png"
+type = "image"
+title = "Bright high-tech operations console dashboard"
+
 [[outputs]]
 id = "KWFzG_rXFYpaSyt41KODn"
 uri = "file://paylogic-monitor.tar.gz"

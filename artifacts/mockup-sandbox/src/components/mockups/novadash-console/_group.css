@@ -4,20 +4,20 @@
   --font-sans: 'Space Grotesk', sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
   
-  --bg: #09090b;
-  --surface: #18181b;
-  --surface-hover: #27272a;
-  --border: #27272a;
+  --bg: #0b1120;
+  --surface: #151e32;
+  --surface-hover: #1e293b;
+  --border: #334155;
   
-  --text: #fafafa;
-  --text-muted: #a1a1aa;
+  --text: #ffffff;
+  --text-muted: #cbd5e1;
   
-  --accent: #bef264; /* Electric Lime */
-  --accent-hover: #d9f99d;
-  --accent-muted: rgba(190, 242, 100, 0.1);
+  --accent: #22d3ee;
+  --accent-hover: #67e8f9;
+  --accent-muted: rgba(34, 211, 238, 0.1);
   
-  --alert: #ef4444;
-  --warn: #f59e0b;
+  --alert: #fb7185;
+  --warn: #fbbf24;
   
   font-family: var(--font-sans);
   background-color: var(--bg);
@@ -65,7 +65,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to bottom, transparent, rgba(190, 242, 100, 0.05), transparent);
+  background: linear-gradient(to bottom, transparent, rgba(34, 211, 238, 0.05), transparent);
   animation: scanline 8s linear infinite;
   pointer-events: none;
 }
