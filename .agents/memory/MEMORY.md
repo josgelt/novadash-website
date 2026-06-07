@@ -1,1 +1,2 @@
 - [Path-routed Vite artifact gotchas](path-routed-vite-artifacts.md) — wouter needs `<Router base>` from BASE_URL; load web fonts via index.html link not CSS @import; custom t() returns arrays despite `string` type.
+- [Mockup preview screenshot timing](mockup-screenshot-timing.md) — external_url screenshots of mockup previews can show large images as blank white boxes; verify the asset HTTP 200s before assuming the mockup is broken.

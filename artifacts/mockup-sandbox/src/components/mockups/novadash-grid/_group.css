@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+.nd-grid {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.nd-grid ::selection {
+  background-color: #ea580c; /* orange-600 */
+  color: #fff;
+}
+
+/* Base grid styles */
+.nd-grid .grid-border {
+  border-color: #d6d3d1; /* stone-300 */
+}

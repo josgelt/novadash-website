@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+.nd-console {
+  --font-sans: 'Space Grotesk', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  
+  --bg: #09090b;
+  --surface: #18181b;
+  --surface-hover: #27272a;
+  --border: #27272a;
+  
+  --text: #fafafa;
+  --text-muted: #a1a1aa;
+  
+  --accent: #bef264; /* Electric Lime */
+  --accent-hover: #d9f99d;
+  --accent-muted: rgba(190, 242, 100, 0.1);
+  
+  --alert: #ef4444;
+  --warn: #f59e0b;
+  
+  font-family: var(--font-sans);
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+.nd-console .font-mono {
+  font-family: var(--font-mono);
+}
+
+/* Base styles for scrollbar */
+.nd-console ::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+.nd-console ::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+.nd-console ::-webkit-scrollbar-thumb {
+  background: var(--surface-hover);
+  border-radius: 4px;
+}
+.nd-console ::-webkit-scrollbar-thumb:hover {
+  background: var(--border);
+}
+
+/* Animations */
+@keyframes console-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.nd-console-pulse {
+  animation: console-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes scanline {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100%); }
+}
+
+.nd-console-scanline {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent, rgba(190, 242, 100, 0.05), transparent);
+  animation: scanline 8s linear infinite;
+  pointer-events: none;
+}
