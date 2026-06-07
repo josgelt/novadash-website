@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Manrope:wght@200;300;400;500&display=swap');
+
+.nd-quiet {
+  --font-serif: 'Cormorant Garamond', serif;
+  --font-sans: 'Manrope', sans-serif;
+  
+  --color-bg: #F9F8F6; /* Soft warm bone/sand canvas */
+  --color-bg-alt: #F2EFEA; /* Slightly darker sand for alternate sections */
+  --color-text: #1E1E1C; /* Deep ink/charcoal text */
+  --color-text-muted: #7A7A76;
+  --color-primary: #9BA89C; /* Dusty sage accent, whisper soft */
+  --color-primary-hover: #869488;
+  --color-border: #E8E5DF; /* Hairline border */
+  
+  font-family: var(--font-sans);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  -webkit-font-smoothing: antialiased;
+}
+
+.nd-quiet h1,
+.nd-quiet h2,
+.nd-quiet h3,
+.nd-quiet h4,
+.nd-quiet h5,
+.nd-quiet h6,
+.nd-quiet .font-serif {
+  font-family: var(--font-serif);
+}
+
+.nd-quiet-btn-primary {
+  background-color: var(--color-text);
+  color: var(--color-bg);
+  border-radius: 0;
+  transition: all 0.4s ease;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  font-size: 0.85rem;
+}
+
+.nd-quiet-btn-primary:hover {
+  background-color: var(--color-primary);
+  color: #fff;
+}
+
+.nd-quiet-btn-secondary {
+  background-color: transparent;
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  border-radius: 0;
+  transition: all 0.4s ease;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  font-size: 0.85rem;
+}
+
+.nd-quiet-btn-secondary:hover {
+  border-color: var(--color-text);
+}
+
+.nd-quiet-fade-up {
+  animation: ndQuietFadeUp 1.5s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.nd-delay-100 { animation-delay: 0.1s; }
+.nd-delay-200 { animation-delay: 0.2s; }
+.nd-delay-300 { animation-delay: 0.3s; }
+
+@keyframes ndQuietFadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.nd-quiet-card {
+  background-color: transparent;
+  border: 1px solid var(--color-border);
+  transition: all 0.5s ease;
+}
+
+.nd-quiet-card:hover {
+  background-color: #fff;
+  border-color: transparent;
+  box-shadow: 0 20px 40px -20px rgba(0, 0, 0, 0.03);
+}
+
+.nd-quiet-divider {
+  height: 1px;
+  background-color: var(--color-border);
+  width: 100%;
+}

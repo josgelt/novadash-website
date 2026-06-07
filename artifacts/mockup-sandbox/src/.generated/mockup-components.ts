@@ -2,8 +2,11 @@
 type ModuleMap = Record<string, () => Promise<Record<string, unknown>>>;
 export const modules: ModuleMap = {
   "./components/mockups/novadash-bold/Home.tsx": () => import("../components/mockups/novadash-bold/Home.tsx"),
-  "./components/mockups/novadash-console/Home.tsx": () => import("../components/mockups/novadash-console/Home.tsx"),
   "./components/mockups/novadash-editorial/Home.tsx": () => import("../components/mockups/novadash-editorial/Home.tsx"),
+  "./components/mockups/novadash-editorial-luxe/Home.tsx": () => import("../components/mockups/novadash-editorial-luxe/Home.tsx"),
+  "./components/mockups/novadash-editorial-playful/Home.tsx": () => import("../components/mockups/novadash-editorial-playful/Home.tsx"),
+  "./components/mockups/novadash-console/Home.tsx": () => import("../components/mockups/novadash-console/Home.tsx"),
+  "./components/mockups/novadash-editorial-quiet/Home.tsx": () => import("../components/mockups/novadash-editorial-quiet/Home.tsx"),
   "./components/mockups/novadash-elegant/Home.tsx": () => import("../components/mockups/novadash-elegant/Home.tsx"),
   "./components/mockups/novadash-grid/Home.tsx": () => import("../components/mockups/novadash-grid/Home.tsx"),
   "./components/mockups/novadash-modern/Home.tsx": () => import("../components/mockups/novadash-modern/Home.tsx")
