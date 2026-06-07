@@ -1,21 +1,31 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { AlertCircle } from "lucide-react";
+import { useI18n } from "@/i18n";
+import { useSEO } from "@/hooks/use-seo";
+import { Button } from "@/components/ui/button";
+import { Link } from "wouter";
 
 export default function NotFound() {
-  return (
-    <div className="min-h-screen w-full flex items-center justify-center bg-gray-50">
-      <Card className="w-full max-w-md mx-4">
-        <CardContent className="pt-6">
-          <div className="flex mb-4 gap-2">
-            <AlertCircle className="h-8 w-8 text-red-500" />
-            <h1 className="text-2xl font-bold text-gray-900">404 Page Not Found</h1>
-          </div>
+  const { t } = useI18n();
+  useSEO('seo.notFound.title', 'seo.notFound.description');
 
-          <p className="mt-4 text-sm text-gray-600">
-            Did you forget to add the page to the router?
-          </p>
-        </CardContent>
-      </Card>
+  return (
+    <div className="min-h-[70vh] w-full flex items-center justify-center bg-slate-50 py-20 px-6">
+      <div className="max-w-md w-full text-center nd-fade-in-up">
+        <div className="w-20 h-20 bg-slate-200 text-slate-500 rounded-full flex items-center justify-center mx-auto mb-6">
+          <AlertCircle size={40} />
+        </div>
+        <h1 className="text-4xl font-bold text-slate-900 mb-4">404</h1>
+        <h2 className="text-2xl font-bold text-slate-800 mb-6">{t('notFound.title')}</h2>
+        
+        <p className="text-lg text-slate-600 mb-10">
+          {t('notFound.text')}
+        </p>
+
+        <Button asChild className="bg-indigo-600 hover:bg-indigo-700 text-white rounded-full px-8 py-6 text-base font-medium">
+          <Link href="/">{t('notFound.back')}</Link>
+        </Button>
+      </div>
     </div>
   );
 }

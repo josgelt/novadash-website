@@ -1,0 +1,1 @@
+- [Path-routed Vite artifact gotchas](path-routed-vite-artifacts.md) — wouter needs `<Router base>` from BASE_URL; load web fonts via index.html link not CSS @import; custom t() returns arrays despite `string` type.
