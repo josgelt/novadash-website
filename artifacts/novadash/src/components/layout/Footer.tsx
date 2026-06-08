@@ -54,6 +54,7 @@ export function Footer() {
             <ul className="space-y-4 text-sm text-[var(--color-text-muted)]">
               <li><Link href="/ueber-uns" className="hover:text-[var(--color-primary)] transition-colors">{t('nav.about')}</Link></li>
               <li><Link href="/kontakt" className="hover:text-[var(--color-primary)] transition-colors">{t('nav.contact')}</Link></li>
+              <li><Link href="/status" className="hover:text-[var(--color-primary)] transition-colors">{t('footer.status')}</Link></li>
             </ul>
           </div>
 

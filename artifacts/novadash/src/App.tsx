@@ -13,6 +13,7 @@ import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
 import Imprint from "./pages/Imprint";
 import SubProcessor from "./pages/SubProcessor";
+import Uptime from "./pages/Uptime";
 import NotFound from "./pages/not-found";
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, "");
@@ -33,6 +34,7 @@ function App() {
           <Route path="/agb" component={Terms} />
           <Route path="/impressum" component={Imprint} />
           <Route path="/sub-processor" component={SubProcessor} />
+          <Route path="/status" component={Uptime} />
           <Route component={NotFound} />
         </Switch>
         </Router>

@@ -18,6 +18,7 @@ export const translations = {
       terms: "AGB",
       imprint: "Impressum",
       subProcessor: "Sub-Processor-Liste",
+      status: "Status",
       rights: "Alle Rechte vorbehalten.",
       product: "Produkt",
       company: "Unternehmen",
@@ -65,6 +66,10 @@ export const translations = {
       subProcessor: {
         title: "Sub-Processor-Liste",
         description: "Übersicht der von NovaDash eingesetzten Sub-Processors und deren Rolle bei der Verarbeitung personenbezogener Daten."
+      },
+      uptime: {
+        title: "System-Status",
+        description: "Live-Statusseite von NovaDash: Verfügbarkeit und Betriebszustand aller Dienste in Echtzeit."
       },
       notFound: {
         title: "Seite nicht gefunden",
@@ -319,6 +324,12 @@ export const translations = {
         ]
       }
     },
+    uptime: {
+      eyebrow: "System-Status",
+      title: "Verfügbarkeit & Status",
+      subtitle: "Live-Überblick über die Verfügbarkeit aller NovaDash-Dienste in Echtzeit.",
+      openExternal: "Status-Seite in neuem Tab öffnen"
+    },
     notFound: {
       eyebrow: "Fehler",
       code: "404",
@@ -346,6 +357,7 @@ export const translations = {
       terms: "Terms of Service",
       imprint: "Imprint",
       subProcessor: "Sub-Processors",
+      status: "Status",
       rights: "All rights reserved.",
       product: "Product",
       company: "Company",
@@ -393,6 +405,10 @@ export const translations = {
       subProcessor: {
         title: "Sub-Processors List",
         description: "Overview of the sub-processors used by NovaDash and their role in processing personal data."
+      },
+      uptime: {
+        title: "System Status",
+        description: "NovaDash live status page: real-time availability and operational state of all services."
       },
       notFound: {
         title: "Page Not Found",
@@ -646,6 +662,12 @@ export const translations = {
           { name: "[Support Tool]", purpose: "Provision of the support ticket system", location: "Ireland (EU)" }
         ]
       }
+    },
+    uptime: {
+      eyebrow: "System Status",
+      title: "Uptime & Status",
+      subtitle: "A real-time overview of the availability of all NovaDash services.",
+      openExternal: "Open status page in a new tab"
     },
     notFound: {
       eyebrow: "Error",
