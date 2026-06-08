@@ -11,7 +11,7 @@ export default function Uptime() {
   return (
     <>
       {/* Hero */}
-      <section className="pt-40 pb-16 px-6 md:px-12 relative overflow-hidden">
+      <section className="pt-40 pb-12 px-6 md:px-12 relative overflow-hidden">
         <div className="absolute inset-0 nd-botanical-dots opacity-50 pointer-events-none z-0"></div>
         <div className="absolute top-[-10%] right-[-5%] w-[600px] h-[600px] bg-[var(--color-primary)] opacity-[0.06] blur-[100px] rounded-full pointer-events-none"></div>
         <div className="container mx-auto max-w-5xl relative z-10 nd-botanical-fade-up">
@@ -27,28 +27,16 @@ export default function Uptime() {
         </div>
       </section>
 
-      {/* Embedded status page */}
-      <section className="pb-24 px-6 md:px-12 relative z-10">
-        <div className="container mx-auto max-w-5xl">
-          <div className="nd-botanical-card overflow-hidden">
-            <iframe
-              src={STATUS_URL}
-              title={t('uptime.title')}
-              className="w-full h-[800px] border-0 block bg-white"
-              loading="lazy"
-            />
-          </div>
-          <div className="mt-6 text-center">
-            <a
-              href={STATUS_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-sm font-mono uppercase tracking-wide text-[var(--color-primary)] hover:text-[var(--color-primary-hover)] transition-colors"
-            >
-              {t('uptime.openExternal')}
-            </a>
-          </div>
-        </div>
+      {/* Embedded status page — full-bleed, borderless, no inner scroll */}
+      <section className="relative z-10 bg-white">
+        <iframe
+          src={STATUS_URL}
+          title={t('uptime.title')}
+          className="block w-full border-0 bg-white"
+          style={{ height: "1900px" }}
+          scrolling="no"
+          loading="lazy"
+        />
       </section>
     </>
   );
