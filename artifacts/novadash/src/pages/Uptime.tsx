@@ -30,14 +30,13 @@ export default function Uptime() {
       {/* Embedded status page */}
       <section className="pb-24 px-6 md:px-12 relative z-10">
         <div className="container mx-auto max-w-5xl">
-          <div className="nd-botanical-card overflow-hidden">
-            <iframe
-              src={STATUS_URL}
-              title={t('uptime.title')}
-              className="w-full h-[800px] border-0 block bg-white"
-              loading="lazy"
-            />
-          </div>
+          <iframe
+            src={STATUS_URL}
+            title={t('uptime.title')}
+            scrolling="no"
+            className="w-full h-[800px] border-0 block bg-white"
+            loading="lazy"
+          />
           <div className="mt-6 text-center">
             <a
               href={STATUS_URL}
