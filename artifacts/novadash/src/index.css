@@ -93,7 +93,9 @@
   --font-serif: 'Cormorant Garamond', serif;
   --font-sans: 'Nunito', sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
+  --font-display: 'Space Grotesk', sans-serif;
 
+  --nd-emerald-700: #047857;
   --color-bg: #F8FAF9;
   --color-bg-alt: #F1F5F2;
   --color-text: #111814;

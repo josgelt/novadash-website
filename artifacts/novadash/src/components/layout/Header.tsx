@@ -4,6 +4,7 @@ import { Link, useLocation } from 'wouter';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Menu } from 'lucide-react';
+import { Logo } from '@/components/brand/Logo';
 
 export function Header() {
   const { lang, setLang, t } = useI18n();
@@ -36,14 +37,7 @@ export function Header() {
       }`}
     >
       <div className="container mx-auto px-6 md:px-12 flex items-center justify-between max-w-7xl">
-        <Link href="/" className="flex items-center gap-3">
-          <div className="w-9 h-9 rounded-md bg-[var(--color-primary)] flex items-center justify-center text-white font-serif italic text-lg shadow-sm">
-            N
-          </div>
-          <span className="text-2xl font-serif font-medium tracking-wide text-[var(--color-text)]">
-            NovaDash
-          </span>
-        </Link>
+        <Logo size="md" href="/" />
 
         <nav className="hidden md:flex items-center gap-10 text-[14px] font-mono text-[var(--color-text-muted)] uppercase tracking-wider">
           {navLinks.map((link) => {

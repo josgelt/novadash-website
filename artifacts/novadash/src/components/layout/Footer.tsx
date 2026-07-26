@@ -1,5 +1,6 @@
 import { useI18n } from '@/i18n';
 import { Link } from 'wouter';
+import { Logo } from '@/components/brand/Logo';
 
 export function Footer() {
   const { lang, setLang, t } = useI18n();
@@ -9,14 +10,7 @@ export function Footer() {
       <div className="container mx-auto max-w-7xl">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
           <div className="md:col-span-1">
-            <Link href="/" className="flex items-center gap-3 mb-6">
-              <div className="w-8 h-8 rounded bg-[var(--color-primary)] flex items-center justify-center text-white font-serif italic text-sm">
-                N
-              </div>
-              <span className="text-xl font-serif font-semibold tracking-wide text-[var(--color-text)]">
-                NovaDash
-              </span>
-            </Link>
+            <Logo size="sm" href="/" style={{ marginBottom: '1.5rem' }} />
             <p className="text-sm font-mono text-[var(--color-text-muted)] mb-6 leading-relaxed">
               {t('footer.tagline')}
             </p>
