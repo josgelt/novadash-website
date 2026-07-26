@@ -149,3 +149,9 @@ id = "0eEkbEr_pNmujkWMtddp6"
 uri = "file://exports/novadash-design-system.zip"
 type = "unspecified"
 title = "NovaDash Design-System (zum Kopieren in Order-Dashboard-Manager)"
+
+[[outputs]]
+id = "hMe5VGUH9ULFcuKauFZRI"
+uri = "file://exports/novadash-claude-design-package.zip"
+type = "unspecified"
+title = "NovaDash Design-Paket für Claude"
