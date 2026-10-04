@@ -8,12 +8,16 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+import { submitInquiry } from "@/lib/inquiry";
 import { CheckCircle2, Terminal } from "lucide-react";
 
 export default function EarlyAccess() {
   const { t } = useI18n();
   useSEO("seo.earlyAccess.title", "seo.earlyAccess.description");
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [sendError, setSendError] = useState(false);
+  const [honeypot, setHoneypot] = useState("");
 
   const formSchema = z.object({
     name: z.string().min(2, t("earlyAccess.form.validation.name")),
@@ -34,8 +38,18 @@ export default function EarlyAccess() {
     },
   });
 
-  function onSubmit(_values: z.infer<typeof formSchema>) {
-    setSubmitted(true);
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    setSending(true);
+    setSendError(false);
+    try {
+      await submitInquiry("early-access", values, honeypot);
+      form.reset();
+      setSubmitted(true);
+    } catch {
+      setSendError(true);
+    } finally {
+      setSending(false);
+    }
   }
 
   const inputClass =
@@ -156,8 +170,22 @@ export default function EarlyAccess() {
                     </FormItem>
                   )}
                 />
+                <input
+                  type="text"
+                  name="website"
+                  value={honeypot}
+                  onChange={(e) => setHoneypot(e.target.value)}
+                  tabIndex={-1}
+                  autoComplete="off"
+                  aria-hidden="true"
+                  className="absolute left-[-10000px] w-px h-px overflow-hidden"
+                />
+                {sendError && (
+                  <p role="alert" className="text-sm text-red-700">{t("earlyAccess.form.sendError")}</p>
+                )}
                 <Button
                   type="submit"
+                  disabled={sending}
                   className="w-full nd-botanical-btn-primary py-6 text-sm font-mono uppercase tracking-wide"
                 >
                   {t("earlyAccess.form.submit")}

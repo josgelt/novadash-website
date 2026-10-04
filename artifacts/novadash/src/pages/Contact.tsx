@@ -8,12 +8,16 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+import { submitInquiry } from "@/lib/inquiry";
 import { CheckCircle2, Mail, MapPin } from "lucide-react";
 
 export default function Contact() {
   const { t } = useI18n();
   useSEO("seo.contact.title", "seo.contact.description");
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [sendError, setSendError] = useState(false);
+  const [honeypot, setHoneypot] = useState("");
 
   const formSchema = z.object({
     name: z.string().min(2, t("contact.form.validation.name")),
@@ -32,8 +36,18 @@ export default function Contact() {
     },
   });
 
-  function onSubmit(_values: z.infer<typeof formSchema>) {
-    setSubmitted(true);
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    setSending(true);
+    setSendError(false);
+    try {
+      await submitInquiry("contact", values, honeypot);
+      form.reset();
+      setSubmitted(true);
+    } catch {
+      setSendError(true);
+    } finally {
+      setSending(false);
+    }
   }
 
   const contactInfo = [
@@ -206,8 +220,22 @@ export default function Contact() {
                         </FormItem>
                       )}
                     />
+                    <input
+                      type="text"
+                      name="website"
+                      value={honeypot}
+                      onChange={(e) => setHoneypot(e.target.value)}
+                      tabIndex={-1}
+                      autoComplete="off"
+                      aria-hidden="true"
+                      className="absolute left-[-10000px] w-px h-px overflow-hidden"
+                    />
+                    {sendError && (
+                      <p role="alert" className="text-sm text-red-700">{t("contact.form.sendError")}</p>
+                    )}
                     <Button
                       type="submit"
+                      disabled={sending}
                       className="w-full nd-botanical-btn-primary py-6 text-sm font-mono uppercase tracking-wide"
                     >
                       {t("contact.form.submit")}

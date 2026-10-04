@@ -204,6 +204,7 @@ export const translations = {
         message: "Nachricht",
         submit: "Nachricht senden",
         successTitle: "Vielen Dank!",
+        sendError: "Die Nachricht konnte nicht gesendet werden. Bitte schreiben Sie uns direkt an info@novadash.eu.",
         success: "Ihre Nachricht wurde erfolgreich gesendet. Wir melden uns Kürze bei Ihnen.",
         newMessage: "Neue Nachricht",
         placeholders: {
@@ -232,6 +233,7 @@ export const translations = {
         message: "Optionale Nachricht",
         submit: "Für Early Access bewerben",
         successTitle: "Anfrage erfolgreich",
+        sendError: "Die Anfrage konnte nicht gesendet werden. Bitte schreiben Sie uns direkt an info@novadash.eu.",
         success: "Vielen Dank für Ihr Interesse! Wir haben Ihre Anfrage erhalten und prüfen diese schnellstmöglich.",
         newRequest: "Weitere Anfrage senden",
         placeholders: {
@@ -535,6 +537,7 @@ export const translations = {
         message: "Message",
         submit: "Send Message",
         successTitle: "Thank you!",
+        sendError: "Your message could not be sent. Please email us directly at info@novadash.eu.",
         success: "Your message has been sent successfully. We will get back to you shortly.",
         newMessage: "New message",
         placeholders: {
@@ -563,6 +566,7 @@ export const translations = {
         message: "Optional Message",
         submit: "Apply for Early Access",
         successTitle: "Request successful",
+        sendError: "Your request could not be sent. Please email us directly at info@novadash.eu.",
         success: "Thank you for your interest! We have received your request and will review it as soon as possible.",
         newRequest: "Send another request",
         placeholders: {
