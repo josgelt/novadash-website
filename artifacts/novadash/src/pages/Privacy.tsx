@@ -82,7 +82,6 @@ export default function Privacy() {
                   <span className="text-[var(--color-text-muted)]">{t('legal.privacy.cityLine')}</span>
                 </p>
                 <p className="text-sm font-mono text-[var(--color-text-muted)] leading-relaxed">
-                  {t('legal.privacy.phoneLine')}<br />
                   {t('legal.privacy.emailLine')}
                 </p>
               </div>

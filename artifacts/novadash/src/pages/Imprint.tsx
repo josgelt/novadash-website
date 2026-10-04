@@ -1,6 +1,6 @@
 import { useI18n } from "@/i18n";
 import { useSEO } from "@/hooks/use-seo";
-import { Building2, UserCheck, Phone, FileText, Receipt, ShieldCheck } from "lucide-react";
+import { Building2, Mail, FileText, Receipt, ShieldCheck } from "lucide-react";
 
 export default function Imprint() {
   const { t } = useI18n();
@@ -10,57 +10,44 @@ export default function Imprint() {
     {
       icon: Building2,
       accent: false,
-      label: t('legal.imprint.s1Title'),
+      label: t('legal.imprint.ownerTitle'),
       lines: [
-        { text: t('legal.imprint.companyName'), strong: true },
+        { text: t('legal.imprint.name'), strong: true },
+        { text: t('legal.imprint.legalForm') },
         { text: t('legal.imprint.addressLine') },
         { text: t('legal.imprint.cityLine') },
         { text: t('legal.imprint.countryLine') },
       ],
     },
     {
-      icon: UserCheck,
+      icon: Mail,
       accent: true,
-      label: t('legal.imprint.representedTitle'),
-      lines: [{ text: t('legal.imprint.representedText') }],
-    },
-    {
-      icon: Phone,
-      accent: false,
       label: t('legal.imprint.contactTitle'),
       lines: [
-        { text: t('legal.imprint.phoneLine') },
         { text: t('legal.imprint.emailLine') },
         { text: t('legal.imprint.websiteLine') },
       ],
     },
     {
-      icon: FileText,
-      accent: true,
-      label: t('legal.imprint.registerTitle'),
+      icon: Receipt,
+      accent: false,
+      label: t('legal.imprint.companyTitle'),
       lines: [
-        { text: t('legal.imprint.registerEntry') },
-        { text: t('legal.imprint.registerCourt') },
-        { text: t('legal.imprint.registerNumber') },
+        { text: t('legal.imprint.vatLine'), strong: true },
+        { text: t('legal.imprint.registerLine') },
       ],
     },
     {
-      icon: Receipt,
-      accent: false,
-      label: t('legal.imprint.vatTitle'),
-      lines: [
-        { text: t('legal.imprint.vatText') },
-        { text: t('legal.imprint.vatNumber'), strong: true },
-      ],
+      icon: FileText,
+      accent: true,
+      label: t('legal.imprint.purposeTitle'),
+      lines: [{ text: t('legal.imprint.purposeText') }],
     },
     {
       icon: ShieldCheck,
-      accent: true,
-      label: t('legal.imprint.responsibleTitle'),
-      lines: [
-        { text: t('legal.imprint.responsibleName'), strong: true },
-        { text: t('legal.imprint.responsibleAddress') },
-      ],
+      accent: false,
+      label: t('legal.imprint.mediaTitle'),
+      lines: [{ text: t('legal.imprint.mediaText') }],
     },
   ];
 
@@ -79,7 +66,7 @@ export default function Imprint() {
           </h1>
           <div className="w-12 h-1 rounded bg-[var(--color-text)] mb-8"></div>
           <p className="text-lg text-[var(--color-text-muted)] max-w-2xl leading-relaxed">
-            {t('legal.placeholderText')}
+            {t('legal.imprint.intro')}
           </p>
         </div>
       </section>
