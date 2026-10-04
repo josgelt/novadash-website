@@ -286,22 +286,17 @@ export const translations = {
         s5Text: "Der Anbieter haftet unbeschränkt bei Vorsatz und grober Fahrlässigkeit. Bei leichter Fahrlässigkeit haftet der Anbieter nur bei Verletzung vertragswesentlicher Pflichten (Kardinalpflichten)."
       },
       imprint: {
-        intro: "Angaben gemäß § 5 E-Commerce-Gesetz (ECG) und Offenlegung gemäß § 25 Mediengesetz (MedienG).",
         ownerTitle: "Medieninhaber und Diensteanbieter",
         name: "Josef Albert Gelter",
-        legalForm: "Einzelunternehmer",
         addressLine: "Erzabt-Klotz-Straße 21",
         cityLine: "5020 Salzburg",
         countryLine: "Österreich",
         contactTitle: "Kontakt",
         emailLine: "E-Mail: info@novadash.eu",
-        websiteLine: "Website: www.novadash.eu",
         vatTitle: "Umsatzsteuer",
         vatLine: "UID-Nummer: ATU82245125",
         purposeTitle: "Unternehmensgegenstand",
         purposeText: "Entwicklung und Betrieb der Software-Plattform NovaDash für Bestellabwicklung und Versandmanagement im Online-Handel.",
-        mediaTitle: "Grundlegende Richtung (§ 25 Abs. 4 MedienG)",
-        mediaText: "Information über die Software NovaDash und das Unternehmen."
       },
       subProcessor: {
         intro: "Um unsere Dienste als NovaDash bereitzustellen, beauftragen wir externe Dienstleister (Sub-Processors / Unterauftragsverarbeiter), die in unserem Auftrag personenbezogene Daten verarbeiten. Wir stellen durch vertragliche Vereinbarungen (Auftragsverarbeitungsverträge) sicher, dass alle Dienstleister strenge Datenschutzstandards (DSGVO) einhalten.",
@@ -622,22 +617,17 @@ export const translations = {
         s5Text: "The Provider is liable without limitation for intent and gross negligence. In the case of slight negligence, the Provider is only liable for the breach of essential contractual obligations (cardinal obligations)."
       },
       imprint: {
-        intro: "Information pursuant to § 5 of the Austrian E-Commerce Act (ECG) and disclosure pursuant to § 25 of the Austrian Media Act (MedienG).",
         ownerTitle: "Service provider and media owner",
         name: "Josef Albert Gelter",
-        legalForm: "Sole proprietor",
         addressLine: "Erzabt-Klotz-Straße 21",
         cityLine: "5020 Salzburg",
         countryLine: "Austria",
         contactTitle: "Contact",
         emailLine: "Email: info@novadash.eu",
-        websiteLine: "Website: www.novadash.eu",
         vatTitle: "VAT",
         vatLine: "VAT ID: ATU82245125",
         purposeTitle: "Business purpose",
         purposeText: "Development and operation of the NovaDash software platform for order processing and shipping management in online retail.",
-        mediaTitle: "Editorial line (§ 25 (4) MedienG)",
-        mediaText: "Information about the NovaDash software and the company."
       },
       subProcessor: {
         intro: "To provide our services as NovaDash, we engage external service providers (sub-processors) who process personal data on our behalf. Through contractual agreements (data processing agreements), we ensure that all service providers comply with strict data protection standards (GDPR).",

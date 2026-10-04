@@ -63,7 +63,7 @@ export function Footer() {
         </div>
 
         <div className="pt-8 border-t border-[var(--color-border)] text-center text-xs font-mono text-[var(--color-text-muted)]">
-          &copy; {new Date().getFullYear()} NovaDash GmbH. {t('footer.rights')}
+          &copy; {new Date().getFullYear()} NovaDash. {t('footer.rights')}
         </div>
       </div>
     </footer>
