@@ -273,7 +273,7 @@ export const translations = {
         responsibleName: "Josef Albert Gelter",
         addressLine: "Erzabt-Klotz-Straße 21",
         cityLine: "5020 Salzburg, Österreich",
-        emailLine: "E-Mail: info@novalayer.at"
+        emailLine: "E-Mail: info@novadash.eu"
       },
       terms: {
         s1Title: "§ 1 Geltungsbereich",
@@ -296,7 +296,7 @@ export const translations = {
         cityLine: "5020 Salzburg",
         countryLine: "Österreich",
         contactTitle: "Kontakt",
-        emailLine: "E-Mail: info@novalayer.at",
+        emailLine: "E-Mail: info@novadash.eu",
         websiteLine: "Website: www.novadash.eu",
         companyTitle: "Unternehmensdaten",
         registerLine: "Nicht im Firmenbuch eingetragen.",
@@ -607,7 +607,7 @@ export const translations = {
         responsibleName: "Josef Albert Gelter",
         addressLine: "Erzabt-Klotz-Straße 21",
         cityLine: "5020 Salzburg, Austria",
-        emailLine: "Email: info@novalayer.at"
+        emailLine: "Email: info@novadash.eu"
       },
       terms: {
         s1Title: "§ 1 Scope",
@@ -630,7 +630,7 @@ export const translations = {
         cityLine: "5020 Salzburg",
         countryLine: "Austria",
         contactTitle: "Contact",
-        emailLine: "Email: info@novalayer.at",
+        emailLine: "Email: info@novadash.eu",
         websiteLine: "Website: www.novadash.eu",
         companyTitle: "Company details",
         registerLine: "Not registered in the Austrian Companies Register.",
