@@ -186,18 +186,16 @@ export const translations = {
       eyebrow: "Kontakt",
       title: "Kontakt",
       subtitle: "Wir sind für Sie da",
-      company: "NovaDash GmbH",
-      info: "NovaDash GmbH\n[Adresse]\nE-Mail: [E-Mail]\nTelefon: [Telefon]",
+      company: "NovaDash",
+      info: "NovaDash\nSalzburg, Österreich\nE-Mail: info@novadash.eu",
       labels: {
-        address: "Adresse",
+        address: "Standort",
         email: "E-Mail",
         phone: "Telefon"
       },
       values: {
-        address: "[Adresse]",
-        city: "[PLZ] [Ort]",
-        email: "[E-Mail]",
-        phone: "[Telefon]"
+        city: "Salzburg, Österreich",
+        email: "info@novadash.eu"
       },
       form: {
         name: "Name",
@@ -312,10 +310,15 @@ export const translations = {
         colPurpose: "Zweck der Verarbeitung",
         colLocation: "Standort / Region",
         rows: [
-          { name: "[Cloud Provider]", purpose: "Hosting der Infrastruktur und Datenbanken", location: "Frankfurt, Deutschland (EU)" },
-          { name: "[E-Mail Provider]", purpose: "Versand von Transaktions-E-Mails (z.B. Passwort zurücksetzen)", location: "Deutschland (EU)" },
-          { name: "[Analytics Provider]", purpose: "Anonymisierte Fehleranalyse und Performance-Monitoring", location: "Europäische Union" },
-          { name: "[Support Tool]", purpose: "Bereitstellung des Support-Ticketsystems", location: "Irland (EU)" }
+          { name: "Hetzner Online GmbH", purpose: "Hosting von Website, Plattform, Datenbank und Datensicherungen", location: "Deutschland (EU)" },
+          { name: "Sendcloud B.V.", purpose: "Erstellung von Versand- und Retourenlabels (sofern vom Händler verbunden)", location: "Niederlande (EU)" },
+          { name: "SendDrop GmbH", purpose: "Erstellung von Versandlabels (sofern vom Händler verbunden)", location: "Deutschland (EU)" },
+          { name: "DHL", purpose: "Versand und Sendungsverfolgung (sofern vom Händler verbunden)", location: "Deutschland (EU)" },
+          { name: "GLS", purpose: "Versand und Sendungsverfolgung (sofern vom Händler verbunden)", location: "Deutschland / Niederlande (EU)" },
+          { name: "LogoiX", purpose: "Fulfillment und Kommissionierung (sofern vom Händler verbunden)", location: "Österreich (EU)" },
+          { name: "17TRACK", purpose: "Sendungsverfolgung – ausschließlich Sendungsnummern, keine Namen oder Adressen", location: "China / Hongkong" },
+          { name: "Functional Software, Inc. (Sentry)", purpose: "Fehlerüberwachung – personenbezogene Inhalte werden vor der Übermittlung entfernt", location: "USA (EU-Standardvertragsklauseln)" },
+          { name: "Better Stack", purpose: "Verfügbarkeitsüberwachung und technische Protokolle ohne personenbezogene Inhalte", location: "EU" }
         ]
       }
     },
@@ -520,18 +523,16 @@ export const translations = {
       eyebrow: "Contact",
       title: "Contact",
       subtitle: "We are here for you",
-      company: "NovaDash GmbH",
-      info: "NovaDash GmbH\n[Address]\nEmail: [Email]\nPhone: [Phone]",
+      company: "NovaDash",
+      info: "NovaDash\nSalzburg, Austria\nEmail: info@novadash.eu",
       labels: {
-        address: "Address",
+        address: "Location",
         email: "Email",
         phone: "Phone"
       },
       values: {
-        address: "[Address]",
-        city: "[ZIP] [City]",
-        email: "[Email]",
-        phone: "[Phone]"
+        city: "Salzburg, Austria",
+        email: "info@novadash.eu"
       },
       form: {
         name: "Name",
@@ -646,10 +647,15 @@ export const translations = {
         colPurpose: "Purpose of Processing",
         colLocation: "Location / Region",
         rows: [
-          { name: "[Cloud Provider]", purpose: "Hosting of infrastructure and databases", location: "Frankfurt, Germany (EU)" },
-          { name: "[Email Provider]", purpose: "Sending transactional emails (e.g. password reset)", location: "Germany (EU)" },
-          { name: "[Analytics Provider]", purpose: "Anonymized error analysis and performance monitoring", location: "European Union" },
-          { name: "[Support Tool]", purpose: "Provision of the support ticket system", location: "Ireland (EU)" }
+          { name: "Hetzner Online GmbH", purpose: "Hosting of website, platform, database and backups", location: "Germany (EU)" },
+          { name: "Sendcloud B.V.", purpose: "Creation of shipping and return labels (if connected by the merchant)", location: "Netherlands (EU)" },
+          { name: "SendDrop GmbH", purpose: "Creation of shipping labels (if connected by the merchant)", location: "Germany (EU)" },
+          { name: "DHL", purpose: "Shipping and tracking (if connected by the merchant)", location: "Germany (EU)" },
+          { name: "GLS", purpose: "Shipping and tracking (if connected by the merchant)", location: "Germany / Netherlands (EU)" },
+          { name: "LogoiX", purpose: "Fulfilment and picking (if connected by the merchant)", location: "Austria (EU)" },
+          { name: "17TRACK", purpose: "Shipment tracking – tracking numbers only, no names or addresses", location: "China / Hong Kong" },
+          { name: "Functional Software, Inc. (Sentry)", purpose: "Error monitoring – personal content is removed before transmission", location: "USA (EU Standard Contractual Clauses)" },
+          { name: "Better Stack", purpose: "Availability monitoring and technical logs without personal content", location: "EU" }
         ]
       }
     },

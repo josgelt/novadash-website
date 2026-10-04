@@ -4,7 +4,7 @@ import { Building2, Mail, FileText, Receipt, ShieldCheck } from "lucide-react";
 
 export default function Imprint() {
   const { t } = useI18n();
-  useSEO('seo.imprint.title', 'seo.imprint.description');
+  useSEO('seo.imprint.title', 'seo.imprint.description', { noindex: true });
 
   const blocks = [
     {

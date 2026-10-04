@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useI18n } from '@/i18n';
 
-export function useSEO(titleKey: string, descriptionKey: string) {
+export function useSEO(titleKey: string, descriptionKey: string, options: { noindex?: boolean } = {}) {
   const { t, lang } = useI18n();
 
   useEffect(() => {
@@ -24,4 +24,14 @@ export function useSEO(titleKey: string, descriptionKey: string) {
     metaDesc.setAttribute('content', description !== descriptionKey ? description : 'Cloud-based multi-channel order management platform.');
     
   }, [t, titleKey, descriptionKey, lang]);
+
+  // Legal pages carry the operator's name; keep them out of search results.
+  useEffect(() => {
+    if (!options.noindex) return;
+    const meta = document.createElement('meta');
+    meta.setAttribute('name', 'robots');
+    meta.setAttribute('content', 'noindex, follow');
+    document.head.appendChild(meta);
+    return () => meta.remove();
+  }, [options.noindex]);
 }

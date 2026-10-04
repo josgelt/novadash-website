@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
-import { CheckCircle2, Mail, MapPin, Phone } from "lucide-react";
+import { CheckCircle2, Mail, MapPin } from "lucide-react";
 
 export default function Contact() {
   const { t } = useI18n();
@@ -38,28 +38,16 @@ export default function Contact() {
 
   const contactInfo = [
     {
-      icon: MapPin,
-      accent: false,
-      label: t("contact.labels.address"),
-      value: (
-        <>
-          {t("contact.values.address")}
-          <br />
-          {t("contact.values.city")}
-        </>
-      ),
-    },
-    {
       icon: Mail,
       accent: true,
       label: t("contact.labels.email"),
       value: t("contact.values.email"),
     },
     {
-      icon: Phone,
+      icon: MapPin,
       accent: false,
-      label: t("contact.labels.phone"),
-      value: t("contact.values.phone"),
+      label: t("contact.labels.address"),
+      value: t("contact.values.city"),
     },
   ];
 

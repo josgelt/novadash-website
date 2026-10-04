@@ -23,7 +23,7 @@ export default function SubProcessor() {
             {t('legal.subProcessorTitle')}
           </h1>
           <p className="text-sm font-mono uppercase tracking-wide text-[var(--color-text-muted)]">
-            {t('legal.dateLabel')} {new Date().toLocaleDateString(lang === 'de' ? 'de-DE' : 'en-US')}
+            {t('legal.dateLabel')} {lang === 'de' ? '4. Oktober 2026' : '4 October 2026'}
           </p>
         </div>
       </section>
@@ -32,7 +32,6 @@ export default function SubProcessor() {
       <section className="py-24 px-6 md:px-12 bg-white border-t border-[var(--color-border)] relative z-10">
         <div className="container mx-auto max-w-4xl">
           <p className="text-lg text-[var(--color-text-muted)] leading-relaxed border-l-2 border-[var(--color-primary)] pl-6 mb-8 italic">
-            {t('legal.placeholderText')}
           </p>
           <p className="text-base text-[var(--color-text-muted)] leading-relaxed mb-12">
             {t('legal.subProcessor.intro')}
