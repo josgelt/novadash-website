@@ -9,36 +9,32 @@ const privacyDe: LegalDoc = {
   sections: [
     {
       title: "Verantwortlicher",
-      body: [
-        "Verantwortlich ist der im {imprint} genannte Betreiber von NovaDash. Datenschutzanfragen bitte an info@novadash.eu.",
-      ],
+      body: ["Der im {imprint} genannte Betreiber, erreichbar unter info@novadash.eu."],
     },
     {
       title: "Besuch dieser Website",
       body: [
-        "Die Website läuft auf Servern in Deutschland. Beim Aufruf speichert der Server technisch bedingt IP-Adresse, Zeitpunkt, aufgerufene Seite, verweisende Seite und Browser-Kennung. Das dient der Sicherheit und dem stabilen Betrieb (berechtigtes Interesse, Art. 6 Abs. 1 lit. f DSGVO). Diese Protokolle werden nach 14 Tagen gelöscht.",
-        "Es gibt keine Cookies, kein Tracking und keine Werbedienste. Ihre Sprachauswahl wird nur lokal in Ihrem Browser gespeichert. Schriftarten werden vom eigenen Server geladen.",
-        "Die Seite „Status“ zeigt die Verfügbarkeitsanzeige eines externen Überwachungsdienstes. Erst beim Öffnen dieser Seite wird dabei Ihre IP-Adresse an diesen Dienst übermittelt.",
+        "Beim Aufruf verarbeitet der Server IP-Adresse, Zeitpunkt, aufgerufene Seite, verweisende Seite und Browser-Kennung, um die Website sicher und stabil bereitzustellen (berechtigtes Interesse, Art. 6 Abs. 1 lit. f DSGVO). Empfänger ist unser Hosting-Dienstleister in Deutschland. Speicherdauer: 14 Tage.",
+        "Beim Öffnen der Seite „Status“ wird Ihre IP-Adresse an den Anbieter der dort eingebundenen Verfügbarkeitsanzeige übermittelt (Art. 6 Abs. 1 lit. f DSGVO).",
+        "Ohne diese Daten kann die Website nicht angezeigt werden.",
       ],
     },
     {
       title: "Kontakt per E-Mail",
       body: [
-        "Wenn Sie uns schreiben, verwenden wir Ihre Angaben nur zur Bearbeitung Ihrer Anfrage (Art. 6 Abs. 1 lit. b bzw. f DSGVO) und löschen sie, wenn sie nicht mehr benötigt werden und keine Aufbewahrungspflicht besteht.",
+        "Ihre Angaben verwenden wir zur Bearbeitung Ihrer Anfrage (Art. 6 Abs. 1 lit. b bzw. f DSGVO) und löschen sie, sobald sie dafür nicht mehr benötigt werden und keine gesetzliche Aufbewahrungspflicht besteht.",
       ],
     },
     {
       title: "Nutzung der Plattform",
       body: [
-        "Für die Nutzung von NovaDash verarbeiten wir die Daten Ihres Kontos (z. B. E-Mail-Adresse, Anmeldedaten und Verbindungen zu Marktplätzen) zur Erfüllung des Vertrags (Art. 6 Abs. 1 lit. b DSGVO). Die Plattform setzt nur technisch notwendige Cookies für die Anmeldung (höchstens 7 Tage). Kontodaten werden nach Vertragsende gelöscht, soweit keine gesetzlichen Aufbewahrungspflichten bestehen.",
-        "Zur Fehlererkennung setzen wir einen Dienstleister mit Sitz in den USA ein; personenbezogene Inhalte werden vorher entfernt, Grundlage sind die EU-Standardvertragsklauseln.",
-        "Bestelldaten der Käufer unserer Händler verarbeiten wir nur im Auftrag des jeweiligen Händlers (Art. 28 DSGVO); verantwortlich ist der Händler. Namen und Adressen werden 30 Tage nach dem Kauf automatisch unkenntlich gemacht.",
+        "Für die Nutzung von NovaDash verarbeiten wir Ihre Kontodaten (z. B. E-Mail-Adresse, Anmeldedaten, Verbindungen zu Marktplätzen) zur Vertragserfüllung (Art. 6 Abs. 1 lit. b DSGVO). Ohne diese Daten ist die Nutzung nicht möglich. Empfänger sind unser Hosting-Dienstleister in Deutschland sowie ein Dienstleister zur Fehlererkennung in den USA; die Übermittlung in die USA erfolgt auf Grundlage der EU-Standardvertragsklauseln. Die Daten werden nach Vertragsende gelöscht, soweit keine gesetzliche Aufbewahrungspflicht besteht.",
       ],
     },
     {
       title: "Ihre Rechte",
       body: [
-        "Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung, Datenübertragbarkeit und Widerspruch. Schreiben Sie dazu an info@novadash.eu. Beschwerden können Sie an die österreichische Datenschutzbehörde richten (Barichgasse 40–42, 1030 Wien, dsb@dsb.gv.at).",
+        "Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch (info@novadash.eu) sowie das Recht auf Beschwerde bei der Datenschutzbehörde, Barichgasse 40–42, 1030 Wien.",
       ],
     },
   ],
@@ -49,36 +45,32 @@ const privacyEn: LegalDoc = {
   sections: [
     {
       title: "Controller",
-      body: [
-        "The controller is the operator of NovaDash named in the {imprint}. Please send data protection requests to info@novadash.eu.",
-      ],
+      body: ["The operator named in the {imprint}, reachable at info@novadash.eu."],
     },
     {
       title: "Visiting this website",
       body: [
-        "The website runs on servers in Germany. For technical reasons the server logs IP address, time, requested page, referring page and browser identifier. This serves security and stable operation (legitimate interest, Art. 6(1)(f) GDPR). These logs are deleted after 14 days.",
-        "There are no cookies, no tracking and no advertising services. Your language choice is stored only locally in your browser. Fonts are loaded from our own server.",
-        "The “Status” page shows the availability display of an external monitoring service. Only when you open that page is your IP address transmitted to this service.",
+        "When you visit, the server processes IP address, time, requested page, referring page and browser identifier to provide the website securely and reliably (legitimate interest, Art. 6(1)(f) GDPR). The recipient is our hosting provider in Germany. Retention: 14 days.",
+        "When you open the “Status” page, your IP address is transmitted to the provider of the embedded availability display (Art. 6(1)(f) GDPR).",
+        "Without this data the website cannot be displayed.",
       ],
     },
     {
       title: "Contact by email",
       body: [
-        "If you write to us, we use your details only to handle your request (Art. 6(1)(b) or (f) GDPR) and delete them when no longer needed and no retention obligation applies.",
+        "We use your details to handle your request (Art. 6(1)(b) or (f) GDPR) and delete them once no longer needed for that purpose and no statutory retention obligation applies.",
       ],
     },
     {
       title: "Using the platform",
       body: [
-        "To provide NovaDash we process your account data (e.g. email address, sign-in data and marketplace connections) to perform the contract (Art. 6(1)(b) GDPR). The platform uses only technically necessary sign-in cookies (no more than 7 days). Account data is deleted after the contract ends unless statutory retention obligations apply.",
-        "For error detection we use a service provider based in the USA; personal content is removed beforehand, and the EU Standard Contractual Clauses apply.",
-        "Order data of our merchants’ buyers is processed only on behalf of the respective merchant (Art. 28 GDPR), who is the controller. Names and addresses are automatically made unidentifiable 30 days after purchase.",
+        "To provide NovaDash we process your account data (e.g. email address, sign-in data, marketplace connections) to perform the contract (Art. 6(1)(b) GDPR). Without this data the platform cannot be used. Recipients are our hosting provider in Germany and an error-monitoring provider in the USA; transfers to the USA are based on the EU Standard Contractual Clauses. The data is deleted after the contract ends unless a statutory retention obligation applies.",
       ],
     },
     {
       title: "Your rights",
       body: [
-        "You have the right of access, rectification, erasure, restriction, data portability and objection. Write to info@novadash.eu. You may lodge a complaint with the Austrian Data Protection Authority (Barichgasse 40–42, 1030 Vienna, dsb@dsb.gv.at).",
+        "You have the right of access, rectification, erasure, restriction of processing, data portability and objection (info@novadash.eu), and the right to lodge a complaint with the Austrian Data Protection Authority, Barichgasse 40–42, 1030 Vienna.",
       ],
     },
   ],

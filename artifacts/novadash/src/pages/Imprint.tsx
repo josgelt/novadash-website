@@ -1,6 +1,6 @@
 import { useI18n } from "@/i18n";
 import { useSEO } from "@/hooks/use-seo";
-import { Building2, Mail, FileText, Receipt, ShieldCheck } from "lucide-react";
+import { Building2, Mail, FileText, Receipt } from "lucide-react";
 
 export default function Imprint() {
   const { t } = useI18n();
@@ -13,7 +13,6 @@ export default function Imprint() {
       label: t('legal.imprint.ownerTitle'),
       lines: [
         { text: t('legal.imprint.name'), strong: true },
-        { text: t('legal.imprint.legalForm') },
         { text: t('legal.imprint.addressLine') },
         { text: t('legal.imprint.cityLine') },
         { text: t('legal.imprint.countryLine') },
@@ -23,31 +22,19 @@ export default function Imprint() {
       icon: Mail,
       accent: true,
       label: t('legal.imprint.contactTitle'),
-      lines: [
-        { text: t('legal.imprint.emailLine') },
-        { text: t('legal.imprint.websiteLine') },
-      ],
+      lines: [{ text: t('legal.imprint.emailLine') }],
     },
     {
       icon: Receipt,
       accent: false,
-      label: t('legal.imprint.companyTitle'),
-      lines: [
-        { text: t('legal.imprint.vatLine'), strong: true },
-        { text: t('legal.imprint.registerLine') },
-      ],
+      label: t('legal.imprint.vatTitle'),
+      lines: [{ text: t('legal.imprint.vatLine'), strong: true }],
     },
     {
       icon: FileText,
       accent: true,
       label: t('legal.imprint.purposeTitle'),
       lines: [{ text: t('legal.imprint.purposeText') }],
-    },
-    {
-      icon: ShieldCheck,
-      accent: false,
-      label: t('legal.imprint.mediaTitle'),
-      lines: [{ text: t('legal.imprint.mediaText') }],
     },
   ];
 
@@ -65,9 +52,6 @@ export default function Imprint() {
             {t('legal.imprintTitle')}
           </h1>
           <div className="w-12 h-1 rounded bg-[var(--color-text)] mb-8"></div>
-          <p className="text-lg text-[var(--color-text-muted)] max-w-2xl leading-relaxed">
-            {t('legal.imprint.intro')}
-          </p>
         </div>
       </section>
 
