@@ -58,7 +58,6 @@ export function Footer() {
               <li><Link href="/impressum" className="hover:text-[var(--color-primary)] transition-colors">{t('footer.imprint')}</Link></li>
               <li><Link href="/datenschutz" className="hover:text-[var(--color-primary)] transition-colors">{t('footer.privacy')}</Link></li>
               <li><Link href="/agb" className="hover:text-[var(--color-primary)] transition-colors">{t('footer.terms')}</Link></li>
-              <li><Link href="/sub-processor" className="hover:text-[var(--color-primary)] transition-colors">{t('footer.subProcessor')}</Link></li>
             </ul>
           </div>
         </div>
