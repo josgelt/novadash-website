@@ -55,6 +55,7 @@ export default function AboutClassic() {
       </section>
 
       {/* Team */}
+      {team.length > 0 && (
       <section className="py-28 px-6 md:px-12 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)] relative z-10 overflow-hidden">
         <div className="absolute inset-0 nd-botanical-dots opacity-40 pointer-events-none z-0"></div>
         <div className="container mx-auto max-w-6xl relative z-10">
@@ -83,6 +84,7 @@ export default function AboutClassic() {
           </div>
         </div>
       </section>
+      )}
 
       {/* CTA */}
       <section className="py-32 px-6 md:px-12 bg-[var(--color-secondary)] text-white relative z-10 overflow-hidden">

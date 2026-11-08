@@ -111,7 +111,7 @@ export const translations = {
         subtitle: "NovaDash ist nicht einfach ein weiteres Tool, sondern das Betriebssystem für Ihren E-Commerce-Erfolg.",
         items: [
           { title: "Zentrales Order-Management", desc: "Bestellungen von Amazon, eBay, Ihrem Onlineshop und mehr laufen in Echtzeit in einer sauberen Liste zusammen." },
-          { title: "Automatisierte Labels", desc: "Regelbasierter Versand. Mit einem Klick das günstigste Label erstellen – egal ob DHL, GLS oder DPD." },
+          { title: "Labels in Serie", desc: "Aufträge markieren, Versanddienst wählen und alle Labels auf einmal erzeugen – mit DHL, GLS, Sendcloud oder SendDrop." },
           { title: "Echtzeit-Sendungsverfolgung", desc: "Automatischer Rückfluss der Tracking-IDs an die Marktplätze. Ihre Kunden sind immer informiert." }
         ]
       },
@@ -152,35 +152,30 @@ export const translations = {
       subtitle: "Die komplette Plattform für Ihren Versand",
       hero: "Entdecken Sie, wie NovaDash Ihre E-Commerce-Prozesse automatisiert und skaliert.",
       sections: [
-        { title: "Multi-Channel Order Management", desc: "Konsolidieren Sie alle Ihre Verkaufskanäle in einem einzigen Dashboard. Bestände, Bestellungen und Retouren zentralisiert.", items: ["Amazon", "eBay", "Ecwid", "Shopify [Platzhalter]"], placeholder: "Dashboard-Vorschau (Platzhalter)" },
-        { title: "Regelbasierter Versand", desc: "Automatisieren Sie die Auswahl des besten Versanddienstleisters basierend auf Gewicht, Maßen und Zielort.", items: ["DHL", "GLS", "DPD", "Sendcloud"], placeholder: "Versandregeln (Platzhalter)" },
-        { title: "Tracking-Synchronisation", desc: "Tracking-Nummern werden vollautomatisch an Amazon, eBay und andere Plattformen zurückgemeldet.", items: ["17TRACK", "Automatische Updates", "E-Mail-Benachrichtigungen"], placeholder: "Tracking-Sync (Platzhalter)" },
-        { title: "Europäischer Datenschutz", desc: "Entwickelt mit Fokus auf DSGVO und Datensicherheit. Ihre Daten bleiben in zertifizierten Rechenzentren in der EU.", items: ["DSGVO", "EU-Hosting", "PII-Verschlüsselung"], placeholder: "Sicherheits-Dashboard (Platzhalter)" }
+        { title: "Multi-Channel Order Management", desc: "Konsolidieren Sie alle Ihre Verkaufskanäle in einem einzigen Dashboard. Bestände, Bestellungen und Retouren zentralisiert.", items: ["Amazon", "eBay", "WooCommerce", "Ecwid"], placeholder: "Auftragsübersicht" },
+        { title: "Versandlabels in Serie", desc: "Erzeugen Sie Versand- und Retourenlabels für viele Aufträge auf einmal und drucken Sie sie direkt am Etikettendrucker.", items: ["DHL", "GLS", "Sendcloud", "SendDrop"], placeholder: "Versandlabels" },
+        { title: "Tracking-Synchronisation", desc: "Tracking-Nummern werden vollautomatisch an Amazon, eBay und andere Plattformen zurückgemeldet.", items: ["Automatische Rückmeldung", "Sendungsstatus", "Hängende Sendungen erkennen"], placeholder: "Sendungsverfolgung" },
+        { title: "Europäischer Datenschutz", desc: "Entwickelt mit Fokus auf DSGVO und Datensicherheit. Ihre Daten liegen auf Servern in der EU.", items: ["DSGVO", "EU-Server", "Verschlüsselte Kundendaten"], placeholder: "Datenschutz" }
       ]
     },
     pricing: {
       eyebrow: "Preise",
       title: "Preise",
       subtitle: "Skalierbare Pläne für jedes Volumen",
-      earlyAccess: "Hinweis: Während der Early-Access-Phase gelten Sonderkonditionen.",
+      earlyAccess: "Preise inklusive Umsatzsteuer. Während des Pilotbetriebs nehmen wir neue Händler einzeln auf.",
       popular: "Beliebt",
       tiers: [
-        { name: "Starter", price: "€ 49 / Monat [Platzhalter]", features: ["Bis zu 500 Bestellungen/Monat", "2 Marktplätze", "Standard-Support"] },
-        { name: "Professional", price: "€ 149 / Monat [Platzhalter]", features: ["Bis zu 2.000 Bestellungen/Monat", "Unlimitierte Marktplätze", "Prioritäts-Support", "Automatisierungsregeln"] },
-        { name: "Business", price: "€ 399 / Monat [Platzhalter]", features: ["Unlimitierte Bestellungen", "Dedizierter Account Manager", "Custom Onboarding", "API-Zugang"] }
+        { name: "NovaDash", price: "39 € / Monat", features: ["Oder 390 € pro Jahr", "Alle Marktplätze und Versanddienste", "Versand- und Retourenlabels", "Print Client, Tracking, Retouren", "14 Tage kostenlos testen"] },
+        { name: "Retourenportal", price: "+ 7,99 € / Monat", features: ["Oder 79,90 € pro Jahr", "Käufer melden Rücksendungen selbst an", "Retourenlabel direkt für den Käufer"] }
       ]
     },
     about: {
       eyebrow: "Über uns",
       title: "Über uns",
       subtitle: "Unsere Mission für den modernen E-Commerce",
-      content: "NovaDash wurde [Gründungsjahr] in [Standort] gegründet, um eine Lücke im Markt zu schließen: Eine professionelle, sichere und performante Lösung für das Order-Management europäischer Händler.",
+      content: "NovaDash entsteht in Salzburg – aus der eigenen Erfahrung, Bestellungen von mehreren Marktplätzen gleichzeitig zu versenden. Ziel ist eine sichere, schnelle Lösung für das Order-Management europäischer Händler.",
       teamTitle: "Unser Team",
-      team: [
-        { name: "[Name 1]", role: "Geschäftsführer / CEO" },
-        { name: "[Name 2]", role: "CTO" },
-        { name: "[Name 3]", role: "Head of Product" }
-      ]
+      team: [] as { name: string; role: string }[]
     },
     contact: {
       eyebrow: "Kontakt",
@@ -444,7 +439,7 @@ export const translations = {
         subtitle: "NovaDash isn't just another tool, it's the operating system for your E-commerce success.",
         items: [
           { title: "Central Order Management", desc: "Orders from Amazon, eBay, your online shop and more converge in real-time in a clean list." },
-          { title: "Automated Labels", desc: "Rule-based shipping. Create the cheapest label with one click – whether DHL, GLS or DPD." },
+          { title: "Labels in batches", desc: "Select orders, pick a carrier and create all labels at once – with DHL, GLS, Sendcloud or SendDrop." },
           { title: "Real-time Tracking", desc: "Automatic sync of tracking IDs back to marketplaces. Your customers are always informed." }
         ]
       },
@@ -485,35 +480,30 @@ export const translations = {
       subtitle: "The complete platform for your shipping",
       hero: "Discover how NovaDash automates and scales your E-commerce processes.",
       sections: [
-        { title: "Multi-Channel Order Management", desc: "Consolidate all your sales channels in a single dashboard. Inventory, orders, and returns centralized.", items: ["Amazon", "eBay", "Ecwid", "Shopify [Placeholder]"], placeholder: "Dashboard Preview (Placeholder)" },
-        { title: "Rule-Based Shipping", desc: "Automate the selection of the best shipping provider based on weight, dimensions, and destination.", items: ["DHL", "GLS", "DPD", "Sendcloud"], placeholder: "Shipping Rules (Placeholder)" },
-        { title: "Tracking Synchronization", desc: "Tracking numbers are automatically reported back to Amazon, eBay, and other platforms.", items: ["17TRACK", "Automatic Updates", "Email Notifications"], placeholder: "Tracking Sync (Placeholder)" },
-        { title: "European Data Protection", desc: "Developed with a focus on GDPR and data security. Your data stays in certified data centers in the EU.", items: ["GDPR", "EU Hosting", "PII Encryption"], placeholder: "Security Dashboard (Placeholder)" }
+        { title: "Multi-Channel Order Management", desc: "Consolidate all your sales channels in a single dashboard. Inventory, orders, and returns centralized.", items: ["Amazon", "eBay", "WooCommerce", "Ecwid"], placeholder: "Order overview" },
+        { title: "Shipping labels in batches", desc: "Create shipping and return labels for many orders at once and print them straight to your label printer.", items: ["DHL", "GLS", "Sendcloud", "SendDrop"], placeholder: "Shipping labels" },
+        { title: "Tracking Synchronization", desc: "Tracking numbers are automatically reported back to Amazon, eBay, and other platforms.", items: ["Automatic feedback", "Shipment status", "Stuck shipment alerts"], placeholder: "Shipment tracking" },
+        { title: "European Data Protection", desc: "Developed with a focus on GDPR and data security. Your data is stored on servers in the EU.", items: ["GDPR", "EU servers", "Encrypted customer data"], placeholder: "Data protection" }
       ]
     },
     pricing: {
       eyebrow: "Pricing",
       title: "Pricing",
       subtitle: "Scalable plans for every volume",
-      earlyAccess: "Note: Special conditions apply during the Early Access phase.",
+      earlyAccess: "Prices include VAT. During the pilot phase we onboard new merchants one by one.",
       popular: "Popular",
       tiers: [
-        { name: "Starter", price: "€ 49 / month [Placeholder]", features: ["Up to 500 orders/month", "2 Marketplaces", "Standard Support"] },
-        { name: "Professional", price: "€ 149 / month [Placeholder]", features: ["Up to 2,000 orders/month", "Unlimited Marketplaces", "Priority Support", "Automation Rules"] },
-        { name: "Business", price: "€ 399 / month [Placeholder]", features: ["Unlimited orders", "Dedicated Account Manager", "Custom Onboarding", "API Access"] }
+        { name: "NovaDash", price: "€39 / month", features: ["Or €390 per year", "All marketplaces and carriers", "Shipping and return labels", "Print Client, tracking, returns", "Try free for 14 days"] },
+        { name: "Returns portal", price: "+ €7.99 / month", features: ["Or €79.90 per year", "Buyers register returns themselves", "Return label straight to the buyer"] }
       ]
     },
     about: {
       eyebrow: "About",
       title: "About Us",
       subtitle: "Our mission for modern E-commerce",
-      content: "NovaDash was founded in [Year] in [Location] to fill a gap in the market: A professional, secure, and high-performance solution for the order management of European merchants.",
+      content: "NovaDash is built in Salzburg – from first-hand experience of shipping orders from several marketplaces at once. The goal is a secure, fast order-management solution for European merchants.",
       teamTitle: "Our Team",
-      team: [
-        { name: "[Name 1]", role: "Managing Director / CEO" },
-        { name: "[Name 2]", role: "CTO" },
-        { name: "[Name 3]", role: "Head of Product" }
-      ]
+      team: [] as { name: string; role: string }[]
     },
     contact: {
       eyebrow: "Contact",

@@ -11,7 +11,7 @@ export default function PricingClassic() {
   useSEO('seo.pricing.title', 'seo.pricing.description');
 
   const tiers = translations[lang].pricing.tiers;
-  const popularIndex = 1;
+  const popularIndex = 0;
 
   return (
     <>
