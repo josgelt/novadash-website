@@ -317,3 +317,54 @@
   transition: border-color 0.2s ease;
 }
 .nd-btn-ghost:hover { border-color: var(--color-text-muted); }
+
+/* ── Classic design (previous look), selectable via the design switch ── */
+:root[data-design="classic"] {
+  --background: 150 20% 98%;
+  --foreground: 146 17% 8%;
+  --card: 0 0% 100%;
+  --card-foreground: 146 17% 8%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 146 17% 8%;
+  --primary: 163 94% 24%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 164 86% 16%;
+  --secondary-foreground: 0 0% 100%;
+  --muted: 150 20% 96%;
+  --muted-foreground: 148 9% 32%;
+  --accent: 175 77% 26%;
+  --accent-foreground: 0 0% 100%;
+  --border: 140 12% 90%;
+  --input: 140 12% 90%;
+  --ring: 163 94% 24%;
+  --app-font-sans: 'Nunito', sans-serif;
+  --app-font-serif: 'Cormorant Garamond', serif;
+  --app-font-mono: 'JetBrains Mono', monospace;
+  --button-outline: rgba(0,0,0, .10);
+  --badge-outline: rgba(0,0,0, .05);
+  --opaque-button-border-intensity: -8;
+  color-scheme: light;
+}
+:root[data-design="classic"] .nd-botanical {
+  --font-serif: 'Cormorant Garamond', serif;
+  --font-sans: 'Nunito', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --font-display: 'Space Grotesk', sans-serif;
+  --nd-emerald-700: #047857;
+  --color-bg: #F8FAF9;
+  --color-bg-alt: #F1F5F2;
+  --color-text: #111814;
+  --color-text-muted: #4B5A52;
+  --color-faint: #4B5A52;
+  --color-primary: #047857;
+  --color-primary-hover: #065F46;
+  --color-btn: #047857;
+  --color-btn-hover: #065F46;
+  --color-on-btn: #FFFFFF;
+  --color-accent: #0F766E;
+  --color-accent-hover: #115E59;
+  --color-secondary: #064E3B;
+  --color-border: #E2E8E4;
+  --color-surface: #FFFFFF;
+}
+:root[data-design="classic"] .nd-botanical-btn-accent { color: #FFFFFF; }

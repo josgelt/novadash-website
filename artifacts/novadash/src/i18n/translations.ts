@@ -117,12 +117,12 @@ export const translations = {
       },
       trust: {
         eyebrow: "Enterprise Security",
-        badge: "Made in Germany",
+        badge: "Made in Austria",
         title: "Kompromisslose Sicherheit für Ihre Kundendaten.",
         subtitle: "Als Profi-Werkzeug nehmen wir Datensicherheit ernst. Keine Experimente, keine Grauzonen. NovaDash ist von Grund auf für die strengen europäischen Datenschutzstandards konzipiert.",
         items: [
           { title: "DSGVO-konform", desc: "Vollständige Eindeckung europäischer Richtlinien." },
-          { title: "EU-Hosting", desc: "Ihre Daten verlassen niemals Deutschland (ISO 27001 zertifizierte Rechenzentren)." },
+          { title: "EU-Hosting", desc: "Ihre Bestelldaten liegen ausschließlich auf Servern in der EU." },
           { title: "PII-Verschlüsselung", desc: "Personenbezogene Daten (PII) sind asymmetrisch verschlüsselt." }
         ],
         card1Title: "End-to-End-Verschlüsselung",
@@ -450,12 +450,12 @@ export const translations = {
       },
       trust: {
         eyebrow: "Enterprise Security",
-        badge: "Made in Germany",
+        badge: "Made in Austria",
         title: "Uncompromising security for your customer data.",
         subtitle: "As a professional tool, we take data security seriously. No experiments, no gray areas. NovaDash is designed from the ground up for strict European data protection standards.",
         items: [
           { title: "GDPR Compliant", desc: "Full coverage of European guidelines." },
-          { title: "EU Hosting", desc: "Your data never leaves Germany (ISO 27001 certified data centers)." },
+          { title: "EU Hosting", desc: "Your order data is stored exclusively on servers in the EU." },
           { title: "PII Encryption", desc: "Personally identifiable information (PII) is asymmetrically encrypted." }
         ],
         card1Title: "End-to-End Encryption",

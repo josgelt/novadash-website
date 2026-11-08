@@ -14,7 +14,7 @@ const privacyDe: LegalDoc = {
     {
       title: "Besuch dieser Website",
       body: [
-        "Beim Aufruf verarbeitet der Server IP-Adresse, Zeitpunkt, aufgerufene Seite, verweisende Seite und Browser-Kennung, um die Website sicher und stabil bereitzustellen (berechtigtes Interesse, Art. 6 Abs. 1 lit. f DSGVO). Empfänger ist unser Hosting-Dienstleister in Deutschland. Speicherdauer: 14 Tage.",
+        "Beim Aufruf verarbeitet der Server IP-Adresse, Zeitpunkt, aufgerufene Seite, verweisende Seite und Browser-Kennung, um die Website sicher und stabil bereitzustellen (berechtigtes Interesse, Art. 6 Abs. 1 lit. f DSGVO). Empfänger ist unser Hosting-Dienstleister mit Servern in der EU. Speicherdauer: 14 Tage.",
         "Beim Öffnen der Seite „Status“ wird Ihre IP-Adresse an den Anbieter der dort eingebundenen Verfügbarkeitsanzeige übermittelt (Art. 6 Abs. 1 lit. f DSGVO).",
         "Ohne diese Daten kann die Website nicht angezeigt werden.",
       ],
@@ -28,7 +28,7 @@ const privacyDe: LegalDoc = {
     {
       title: "Nutzung der Plattform",
       body: [
-        "Für die Nutzung von NovaDash verarbeiten wir Ihre Kontodaten (z. B. E-Mail-Adresse, Anmeldedaten, Verbindungen zu Marktplätzen) zur Vertragserfüllung (Art. 6 Abs. 1 lit. b DSGVO). Ohne diese Daten ist die Nutzung nicht möglich. Empfänger sind unser Hosting-Dienstleister in Deutschland sowie ein Dienstleister zur Fehlererkennung in den USA; die Übermittlung in die USA erfolgt auf Grundlage der EU-Standardvertragsklauseln. Die Daten werden nach Vertragsende gelöscht, soweit keine gesetzliche Aufbewahrungspflicht besteht.",
+        "Für die Nutzung von NovaDash verarbeiten wir Ihre Kontodaten (z. B. E-Mail-Adresse, Anmeldedaten, Verbindungen zu Marktplätzen) zur Vertragserfüllung (Art. 6 Abs. 1 lit. b DSGVO). Ohne diese Daten ist die Nutzung nicht möglich. Empfänger sind unser Hosting-Dienstleister mit Servern in der EU sowie ein Dienstleister zur Fehlererkennung in den USA; die Übermittlung in die USA erfolgt auf Grundlage der EU-Standardvertragsklauseln. Die Daten werden nach Vertragsende gelöscht, soweit keine gesetzliche Aufbewahrungspflicht besteht.",
       ],
     },
     {
@@ -50,7 +50,7 @@ const privacyEn: LegalDoc = {
     {
       title: "Visiting this website",
       body: [
-        "When you visit, the server processes IP address, time, requested page, referring page and browser identifier to provide the website securely and reliably (legitimate interest, Art. 6(1)(f) GDPR). The recipient is our hosting provider in Germany. Retention: 14 days.",
+        "When you visit, the server processes IP address, time, requested page, referring page and browser identifier to provide the website securely and reliably (legitimate interest, Art. 6(1)(f) GDPR). The recipient is our hosting provider with servers in the EU. Retention: 14 days.",
         "When you open the “Status” page, your IP address is transmitted to the provider of the embedded availability display (Art. 6(1)(f) GDPR).",
         "Without this data the website cannot be displayed.",
       ],
@@ -64,7 +64,7 @@ const privacyEn: LegalDoc = {
     {
       title: "Using the platform",
       body: [
-        "To provide NovaDash we process your account data (e.g. email address, sign-in data, marketplace connections) to perform the contract (Art. 6(1)(b) GDPR). Without this data the platform cannot be used. Recipients are our hosting provider in Germany and an error-monitoring provider in the USA; transfers to the USA are based on the EU Standard Contractual Clauses. The data is deleted after the contract ends unless a statutory retention obligation applies.",
+        "To provide NovaDash we process your account data (e.g. email address, sign-in data, marketplace connections) to perform the contract (Art. 6(1)(b) GDPR). Without this data the platform cannot be used. Recipients are our hosting provider with servers in the EU and an error-monitoring provider in the USA; transfers to the USA are based on the EU Standard Contractual Clauses. The data is deleted after the contract ends unless a statutory retention obligation applies.",
       ],
     },
     {

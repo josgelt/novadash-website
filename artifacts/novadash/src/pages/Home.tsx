@@ -2,6 +2,8 @@ import { Link } from "wouter";
 import { useI18n } from "@/i18n";
 import { useSEO } from "@/hooks/use-seo";
 import { homeB } from "@/i18n/home-b";
+import { useDesign } from "@/theme";
+import HomeClassic from "./HomeClassic";
 
 // Sample rows for the control-room preview (illustrative, not real orders).
 const SAMPLE_ROWS = [
@@ -20,6 +22,11 @@ const TONE_VAR: Record<string, string> = {
 };
 
 export default function Home() {
+  const design = useDesign();
+  return design === "classic" ? <HomeClassic /> : <HomeB />;
+}
+
+function HomeB() {
   const { lang } = useI18n();
   useSEO("seo.home.title", "seo.home.description");
   const c = homeB[lang];

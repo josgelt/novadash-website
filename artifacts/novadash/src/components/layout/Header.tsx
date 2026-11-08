@@ -5,6 +5,7 @@ import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Menu, Moon, Sun } from 'lucide-react';
 import { Logo } from '@/components/brand/Logo';
 import { getTheme, setTheme, type Theme } from '@/theme';
+import { DesignSwitch } from '@/components/DesignSwitch';
 
 function ThemeToggle() {
   const { lang } = useI18n();
@@ -77,6 +78,7 @@ export function Header() {
             <span className="text-[var(--color-border)]" aria-hidden="true">|</span>
             {langButton('en', t('nav.languageEn'))}
           </div>
+          <DesignSwitch className="hidden lg:inline text-[var(--color-faint)] hover:text-[var(--color-text)]" />
           <ThemeToggle />
           <Link href="/early-access" className="hidden lg:inline-flex nd-btn-lime px-[18px] py-3 text-[15px]">
             {t('nav.earlyAccess')}
@@ -108,6 +110,7 @@ export function Header() {
                 {langButton('de', t('nav.languageDe'))}
                 {langButton('en', t('nav.languageEn'))}
               </div>
+              <DesignSwitch className="self-start text-[var(--color-text-muted)]" />
               <Link href="/early-access" onClick={() => setMobileOpen(false)} className="nd-btn-lime px-6 py-3">
                 {t('nav.earlyAccess')}
               </Link>
