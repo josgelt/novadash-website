@@ -49,64 +49,91 @@
 }
 
 :root {
-  /* Emerald / botanical palette mapped to HSL for shadcn components */
-  --background: 150 20% 98%; /* #F8FAF9 */
-  --foreground: 146 17% 8%;  /* #111814 */
-  --card: 0 0% 100%;
-  --card-foreground: 146 17% 8%;
-  --popover: 0 0% 100%;
-  --popover-foreground: 146 17% 8%;
+  /* Design B "Kontrollraum" — dark is the default, light via html[data-theme="light"] */
+  --background: 220 27% 6%;
+  --foreground: 216 12% 92%;
+  --card: 215 26% 9%;
+  --card-foreground: 216 12% 92%;
+  --popover: 215 26% 9%;
+  --popover-foreground: 216 12% 92%;
+  --primary: 82 85% 69%;
+  --primary-foreground: 220 27% 6%;
+  --secondary: 215 25% 11%;
+  --secondary-foreground: 216 12% 92%;
+  --muted: 215 25% 11%;
+  --muted-foreground: 214 12% 70%;
+  --accent: 199 92% 73%;
+  --accent-foreground: 220 27% 6%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 215 21% 16%;
+  --input: 215 21% 20%;
+  --ring: 82 85% 69%;
 
-  --primary: 163 94% 24%;    /* #047857 deep emerald */
-  --primary-foreground: 0 0% 100%;
-
-  --secondary: 164 86% 16%;  /* #064E3B deep forest */
-  --secondary-foreground: 0 0% 100%;
-
-  --muted: 150 20% 96%;      /* #F1F5F2 */
-  --muted-foreground: 148 9% 32%; /* #4B5A52 */
-
-  --accent: 175 77% 26%;     /* #0F766E deep teal */
-  --accent-foreground: 0 0% 100%;
-
-  --destructive: 0 84.2% 60.2%;
-  --destructive-foreground: 210 40% 98%;
-
-  --border: 140 12% 90%;     /* #E2E8E4 */
-  --input: 140 12% 90%;
-  --ring: 163 94% 24%;
-
-  --app-font-sans: 'Nunito', sans-serif;
-  --app-font-serif: 'Cormorant Garamond', serif;
-  --app-font-mono: 'JetBrains Mono', monospace;
+  --app-font-sans: 'Inter', system-ui, sans-serif;
+  --app-font-serif: 'Inter', system-ui, sans-serif;
+  --app-font-mono: 'JetBrains Mono', ui-monospace, monospace;
   --radius: 0.5rem;
 
+  --button-outline: rgba(255,255,255, .10);
+  --badge-outline: rgba(255,255,255, .05);
+  --opaque-button-border-intensity: 9;
+  color-scheme: dark;
+}
+
+:root[data-theme="light"] {
+  --background: 220 18% 97%;
+  --foreground: 220 27% 6%;
+  --card: 0 0% 100%;
+  --card-foreground: 220 27% 6%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 220 27% 6%;
+  --primary: 82 85% 69%;
+  --primary-foreground: 220 27% 6%;
+  --secondary: 220 14% 94%;
+  --secondary-foreground: 220 27% 6%;
+  --muted: 220 14% 94%;
+  --muted-foreground: 215 14% 34%;
+  --accent: 201 96% 32%;
+  --accent-foreground: 0 0% 100%;
+  --border: 216 14% 90%;
+  --input: 216 14% 86%;
+  --ring: 85 78% 27%;
   --button-outline: rgba(0,0,0, .10);
   --badge-outline: rgba(0,0,0, .05);
   --opaque-button-border-intensity: -8;
+  color-scheme: light;
 }
 
 /* ============================================================
    Botanical / Editorial design system (graduated from mockup)
    ============================================================ */
 .nd-botanical {
-  --font-serif: 'Cormorant Garamond', serif;
-  --font-sans: 'Nunito', sans-serif;
-  --font-mono: 'JetBrains Mono', monospace;
-  --font-display: 'Space Grotesk', sans-serif;
+  --font-serif: 'Inter', system-ui, sans-serif;
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+  --font-display: 'Inter', system-ui, sans-serif;
 
-  --nd-emerald-700: #047857;
-  --color-bg: #F8FAF9;
-  --color-bg-alt: #F1F5F2;
-  --color-text: #111814;
-  --color-text-muted: #4B5A52;
-  --color-primary: #047857;
-  --color-primary-hover: #065F46;
-  --color-accent: #0F766E;
-  --color-accent-hover: #115E59;
-  --color-secondary: #064E3B;
-  --color-border: #E2E8E4;
-  --color-surface: #FFFFFF;
+  --nd-emerald-700: #C6F36B;
+  --color-bg: #0B0E13;
+  --color-bg-alt: #11161D;
+  --color-text: #E6E8EB;
+  --color-text-muted: #A9B1BC;
+  --color-primary: #C6F36B;
+  --color-btn: #C6F36B;
+  --color-btn-hover: #D7FA8E;
+  --color-on-btn: #0B0E13;
+  --st-open: #FDBA74;
+  --st-label: #7DD3FC;
+  --st-print: #C4B5FD;
+  --st-sent: #C6F36B;
+  --color-faint: #8A94A1;
+  --color-primary-hover: #D7FA8E;
+  --color-accent: #7DD3FC;
+  --color-accent-hover: #BAE6FD;
+  --color-secondary: #141A22;
+  --color-border: #1F2630;
+  --color-surface: #11161D;
 
   font-family: var(--font-sans);
   background-color: var(--color-bg);
@@ -129,8 +156,8 @@
 }
 
 .nd-botanical-btn-primary {
-  background-color: var(--color-primary);
-  color: white;
+  background-color: var(--color-btn);
+  color: var(--color-on-btn);
   border-radius: 0.5rem;
   transition: all 0.3s ease;
   font-weight: 600;
@@ -138,14 +165,14 @@
 }
 
 .nd-botanical-btn-primary:hover {
-  background-color: var(--color-primary-hover);
+  background-color: var(--color-btn-hover);
   transform: translateY(-1px);
-  box-shadow: 0 4px 14px rgba(4, 120, 87, 0.22);
+  box-shadow: 0 4px 14px rgba(198, 243, 107, 0.25);
 }
 
 .nd-botanical-btn-accent {
   background-color: var(--color-accent);
-  color: white;
+  color: var(--color-on-btn);
   border-radius: 0.5rem;
   transition: all 0.3s ease;
   font-weight: 600;
@@ -155,7 +182,7 @@
 .nd-botanical-btn-accent:hover {
   background-color: var(--color-accent-hover);
   transform: translateY(-1px);
-  box-shadow: 0 4px 14px rgba(15, 118, 110, 0.22);
+  box-shadow: 0 4px 14px rgba(125, 211, 252, 0.25);
 }
 
 .nd-botanical-btn-secondary {
@@ -171,7 +198,7 @@
 .nd-botanical-btn-secondary:hover {
   border-color: var(--color-primary);
   color: var(--color-primary);
-  background-color: rgba(4, 120, 87, 0.05);
+  background-color: transparent;
 }
 
 .nd-botanical-card {
@@ -241,3 +268,52 @@
     @apply font-sans antialiased bg-background text-foreground;
   }
 }
+
+/* ── Design B: light mode, surfaces, helpers ── */
+:root[data-theme="light"] .nd-botanical {
+  --nd-emerald-700: #0B0E13;
+  --color-bg: #F6F7F9;
+  --color-bg-alt: #EEF0F3;
+  --color-text: #0B0E13;
+  --color-text-muted: #4B5563;
+  --color-faint: #5B6573;
+  --color-primary: #4D7C0F;
+  --color-primary-hover: #3F6212;
+  --color-accent: #0369A1;
+  --color-accent-hover: #075985;
+  --color-secondary: #0B0E13;
+  --color-border: #E3E6EB;
+  --color-surface: #FFFFFF;
+  --st-open: #C2410C;
+  --st-label: #0369A1;
+  --st-print: #6D28D9;
+  --st-sent: #4D7C0F;
+}
+:root[data-theme="light"] .nd-botanical-btn-accent { color: #FFFFFF; }
+/* Pages use bg-white / bg-gray-50 for panels: follow the theme surface */
+.nd-botanical .bg-white { background-color: var(--color-surface); }
+.nd-botanical .bg-gray-50 { background-color: var(--color-bg-alt); }
+.nd-mono { font-family: 'JetBrains Mono', ui-monospace, monospace; }
+.nd-btn-lime {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: var(--color-btn);
+  color: var(--color-on-btn);
+  border-radius: 6px;
+  font-weight: 700;
+  transition: background-color 0.2s ease;
+}
+.nd-btn-lime:hover { background-color: var(--color-btn-hover); }
+.nd-btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  font-weight: 600;
+  transition: border-color 0.2s ease;
+}
+.nd-btn-ghost:hover { border-color: var(--color-text-muted); }

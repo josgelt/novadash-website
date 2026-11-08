@@ -1,66 +1,20 @@
 import React from "react";
 import { Link } from "wouter";
 
-// NovaDash logo — "Nova [barcode] Dash", Space Grotesk Medium; the barcode replaces the dash.
-const BARS: Array<[number, number]> = [
-  [0, 3],
-  [5, 1.5],
-  [9.5, 4],
-  [16, 1.5],
-  [20.5, 2.5],
-  [26, 4.5],
-  [33, 1.5],
-  [37.5, 3],
-  [43.5, 1.5],
-];
-
-export function Barcode({
-  height = 18,
-  color = "var(--color-primary)",
-  style,
-}: {
-  height?: number;
-  color?: string;
-  style?: React.CSSProperties;
-}) {
-  const s = height / 22;
+// Design B mark: outlined tile with two bars (a stylised order count). Colours follow
+// the theme: lime on dark, ink frame with olive bars on light.
+export function LogoMark({ size = 26 }: { size?: number }) {
   return (
-    <svg
-      width={45 * s}
-      height={height}
-      viewBox="0 0 45 22"
-      style={{ alignSelf: "center", ...style }}
-      aria-hidden="true"
-    >
-      <g fill={color}>
-        {BARS.map(([x, w], i) => (
-          <rect key={i} x={x} width={w} height="22" />
-        ))}
-      </g>
-    </svg>
-  );
-}
-
-export function LogoIcon({ size = 36, radius, style }: { size?: number; radius?: number; style?: React.CSSProperties }) {
-  return (
-    <svg width={size} height={size} viewBox="0 0 56 56" style={style} aria-label="NovaDash">
-      <rect width="56" height="56" rx={radius ?? (size >= 48 ? 14 : size >= 28 ? 12 : 6)} fill="var(--nd-emerald-700, #0F766E)" />
-      <g fill="#fff">
-        <rect x="11" y="16" width="3" height="24" />
-        <rect x="17" y="16" width="1.5" height="24" />
-        <rect x="21.5" y="16" width="4" height="24" />
-        <rect x="28.5" y="16" width="1.5" height="24" />
-        <rect x="33" y="16" width="2.5" height="24" />
-        <rect x="38.5" y="16" width="4.5" height="24" />
-        <rect x="45.5" y="16" width="1.5" height="24" />
-      </g>
+    <svg width={size} height={size} viewBox="0 0 26 26" aria-hidden="true">
+      <rect x="1" y="1" width="24" height="24" rx="5" fill="none" stroke="var(--nd-emerald-700)" strokeWidth="2" />
+      <rect x="7" y="7" width="5" height="12" fill="var(--color-primary)" />
+      <rect x="14" y="11" width="5" height="8" fill="var(--color-primary)" />
     </svg>
   );
 }
 
 export function Logo({
   size = "md",
-  variant = "light",
   href = "/",
   style,
 }: {
@@ -69,24 +23,16 @@ export function Logo({
   href?: string;
   style?: React.CSSProperties;
 }) {
-  const word = size === "sm" ? 20 : 24;
-  const text = variant === "dark" ? "#fff" : "var(--color-text)";
-  const bars = variant === "dark" ? "#7BC5A8" : "var(--color-primary)";
   return (
     <Link
       href={href}
-      style={{
-        display: "inline-flex",
-        alignItems: "baseline",
-        gap: Math.round(word * 0.28),
-        textDecoration: "none",
-        ...style,
-      }}
+      style={{ display: "inline-flex", alignItems: "center", gap: 10, textDecoration: "none", ...style }}
       aria-label="NovaDash"
     >
-      <span style={{ fontFamily: "var(--font-display)", fontWeight: 500, fontSize: word, color: text }}>Nova</span>
-      <Barcode height={Math.round(word * 0.64)} color={bars} />
-      <span style={{ fontFamily: "var(--font-display)", fontWeight: 500, fontSize: word, color: text }}>Dash</span>
+      <LogoMark size={size === "sm" ? 22 : 26} />
+      <span style={{ fontWeight: 700, fontSize: size === "sm" ? 16 : 18, letterSpacing: "-0.01em", color: "var(--color-text)" }}>
+        NovaDash
+      </span>
     </Link>
   );
 }
