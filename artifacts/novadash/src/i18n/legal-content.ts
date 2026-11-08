@@ -5,7 +5,7 @@ export type LegalSection = { title: string; body: (string | string[])[] };
 export type LegalDoc = { updated: string; intro?: string; sections: LegalSection[] };
 
 const privacyDe: LegalDoc = {
-  updated: "4. Oktober 2026",
+  updated: "8. November 2026",
   sections: [
     {
       title: "Verantwortlicher",
@@ -29,6 +29,7 @@ const privacyDe: LegalDoc = {
       title: "Nutzung der Plattform",
       body: [
         "Für die Nutzung von NovaDash verarbeiten wir Ihre Kontodaten (z. B. E-Mail-Adresse, Anmeldedaten, Verbindungen zu Marktplätzen) zur Vertragserfüllung (Art. 6 Abs. 1 lit. b DSGVO). Ohne diese Daten ist die Nutzung nicht möglich. Empfänger sind unser Hosting-Dienstleister mit Servern in der EU sowie ein Dienstleister zur Fehlererkennung in den USA; die Übermittlung in die USA erfolgt auf Grundlage der EU-Standardvertragsklauseln. Die Daten werden nach Vertragsende gelöscht, soweit keine gesetzliche Aufbewahrungspflicht besteht.",
+        "Für ein kostenpflichtiges Abo wickelt ein Zahlungsdienstleister mit Sitz in Irland und den USA Bezahlung, Rechnung und Umsatzsteuer ab (Art. 6 Abs. 1 lit. b DSGVO). Er erhält von uns die Kennung Ihres Kontos und eine E-Mail-Adresse; Name, Anschrift und Zahlungsdaten geben Sie direkt bei ihm ein, wir erhalten sie nicht. Für Betrugsabwehr, eigene gesetzliche Pflichten und die Abwicklung als Händler des Bezahlvorgangs ist er selbst verantwortlich. Die Übermittlung in die USA erfolgt auf Grundlage des EU-US Data Privacy Framework und der EU-Standardvertragsklauseln.",
       ],
     },
     {
@@ -41,7 +42,7 @@ const privacyDe: LegalDoc = {
 };
 
 const privacyEn: LegalDoc = {
-  updated: "4 October 2026",
+  updated: "8 November 2026",
   sections: [
     {
       title: "Controller",
@@ -65,6 +66,7 @@ const privacyEn: LegalDoc = {
       title: "Using the platform",
       body: [
         "To provide NovaDash we process your account data (e.g. email address, sign-in data, marketplace connections) to perform the contract (Art. 6(1)(b) GDPR). Without this data the platform cannot be used. Recipients are our hosting provider with servers in the EU and an error-monitoring provider in the USA; transfers to the USA are based on the EU Standard Contractual Clauses. The data is deleted after the contract ends unless a statutory retention obligation applies.",
+        "For a paid subscription, a payment service provider based in Ireland and the USA handles payment, invoicing and VAT (Art. 6(1)(b) GDPR). We give it your account identifier and an email address; you enter your name, address and payment details directly with the provider, and we do not receive them. The provider is itself responsible for fraud prevention, its own legal obligations and handling the transaction as merchant of record. Transfers to the USA are based on the EU-U.S. Data Privacy Framework and the EU Standard Contractual Clauses.",
       ],
     },
     {
@@ -77,7 +79,7 @@ const privacyEn: LegalDoc = {
 };
 
 const termsDe: LegalDoc = {
-  updated: "4. Oktober 2026",
+  updated: "8. November 2026",
   sections: [
     {
       title: "Geltungsbereich",
@@ -91,12 +93,13 @@ const termsDe: LegalDoc = {
       title: "Vertragsschluss",
       body: [
         "Die Darstellung auf der Website ist kein bindendes Angebot. Der Vertrag kommt zustande, wenn der Anbieter einen Antrag des Kunden (z. B. eine Registrierung oder Early-Access-Anfrage) annimmt und den Zugang zur Plattform freischaltet.",
+        "Ein kostenpflichtiges Abo kommt zustande, wenn der Kunde es in NovaDash unter Einstellungen → Abrechnung auswählt und den Bezahlvorgang auf der Bezahlseite von Stripe abschließt. Die dabei angezeigten Abo-Bedingungen (Preis, Abrechnungszeitraum, Testzeitraum, Erweiterungen) sind Teil des Vertrags.",
       ],
     },
     {
       title: "Leistungen",
       body: [
-        "Der Anbieter stellt dem Kunden NovaDash als webbasierte Software (Software as a Service) über das Internet zur Verfügung. Der Leistungsumfang ergibt sich aus dem vereinbarten Tarif bzw. der individuellen Vereinbarung.",
+        "Der Anbieter stellt dem Kunden NovaDash als webbasierte Software (Software as a Service) über das Internet zur Verfügung. Der Leistungsumfang ergibt sich aus dem gebuchten Abo (Grundpaket und gebuchte Erweiterungen wie das Retourenportal) bzw. der individuellen Vereinbarung.",
         "NovaDash verbindet sich mit Diensten Dritter (insbesondere Marktplätzen und Versanddienstleistern). Deren Verfügbarkeit, Schnittstellen und Bedingungen liegen außerhalb des Einflusses des Anbieters. Ändert ein Drittanbieter seine Schnittstelle, passt der Anbieter die Anbindung in angemessener Frist an; ein Anspruch auf eine bestimmte Integration besteht nicht.",
         "Der Anbieter entwickelt NovaDash laufend weiter und darf Funktionen ändern, sofern der vertragliche Kernnutzen erhalten bleibt. In der Pilot- und Early-Access-Phase können Funktionen eingeschränkt oder vorläufig sein.",
       ],
@@ -127,15 +130,21 @@ const termsDe: LegalDoc = {
     {
       title: "Preise und Zahlung",
       body: [
-        "Es gelten die bei Vertragsschluss vereinbarten Preise. Alle Preise verstehen sich netto zuzüglich der gesetzlichen Umsatzsteuer; bei Kunden in anderen EU-Mitgliedstaaten mit gültiger UID-Nummer geht die Steuerschuld auf den Kunden über (Reverse Charge).",
-        "Die Abrechnung erfolgt monatlich im Voraus. Rechnungen sind innerhalb von 14 Tagen ohne Abzug fällig. Bei Zahlungsverzug von mehr als 30 Tagen darf der Anbieter den Zugang nach vorheriger Ankündigung sperren.",
+        "Es gelten die Preise, die in NovaDash vor dem Abschluss angezeigt werden. Sie enthalten die gesetzliche Umsatzsteuer. Bei Unternehmen mit gültiger UID-Nummer kann die Steuerschuld auf den Kunden übergehen (Reverse Charge); der Betrag bleibt dann gleich und enthält keine Umsatzsteuer.",
+        "Bezahlt wird über Stripe Managed Payments. Bezahlvorgang, Rechnung und Umsatzsteuer übernimmt Link (Sold through Link, LLC), ein Unternehmen der Stripe-Gruppe; die Rechnung stellt Link im eigenen Namen aus. Für den Bezahlvorgang gelten ergänzend die Bedingungen von Link für Käufe „Verkauft über Link“ (link.com/terms).",
+        "Abgebucht wird im Voraus für den gewählten Abrechnungszeitraum (Monat oder Jahr) vom Zahlungsmittel, das der Kunde auf der Bezahlseite hinterlegt, erstmals bei Abschluss bzw. am Ende des Testzeitraums. Wird eine Erweiterung während eines laufenden Zeitraums dazugebucht, wird sie für den Rest dieses Zeitraums anteilig sofort berechnet.",
+        "Neue Kunden können NovaDash einmalig 14 Tage kostenlos testen. Das Zahlungsmittel wird beim Start hinterlegt. Wird das Abo nicht vor Ende des Testzeitraums gekündigt, geht es automatisch in das gewählte kostenpflichtige Abo über; die erste Abbuchung erfolgt am Ende des Testzeitraums.",
+        "Schlägt eine Abbuchung fehl, wird sie während rund zwei Wochen erneut versucht, und der Kunde wird in NovaDash darauf hingewiesen. Gelingt sie nicht, endet das Abo und das Konto wechselt in den Lesemodus: Daten ansehen und exportieren bleibt möglich, Abgleiche, Etiketten und automatische Abläufe ruhen, bis wieder ein Abo besteht.",
+        "Bezahlte Zeiträume werden bei Kündigung oder Abbestellung nicht anteilig erstattet. Unberührt bleiben die Erstattungsrichtlinie von Link (support.link.com/questions/sold-through-link-refunds) und gesetzliche Ansprüche.",
       ],
     },
     {
       title: "Laufzeit und Kündigung",
       body: [
-        "Sofern nichts anderes vereinbart ist, läuft der Vertrag auf unbestimmte Zeit und kann von beiden Seiten zum Ende jedes Kalendermonats gekündigt werden. Die Kündigung per E-Mail genügt. Das Recht zur außerordentlichen Kündigung aus wichtigem Grund bleibt unberührt.",
-        "Nach Vertragsende werden die Daten des Kunden gelöscht, soweit keine gesetzlichen Aufbewahrungspflichten bestehen. Der Kunde ist dafür verantwortlich, benötigte Daten vorher zu exportieren.",
+        "Ein Abo läuft für den gewählten Abrechnungszeitraum (Monat oder Jahr) und verlängert sich automatisch um denselben Zeitraum zum selben Preis, wenn es nicht vor dessen Ende gekündigt wird.",
+        "Der Kunde kann jederzeit zum Ende des laufenden Zeitraums kündigen: in NovaDash unter Einstellungen → Abrechnung → „Abo verwalten“, über sein Link-Konto oder per E-Mail an info@novadash.eu. Bis zum Ende des bezahlten Zeitraums bleibt der gebuchte Umfang freigeschaltet. Erweiterungen wie das Retourenportal kann der Kunde in NovaDash einzeln abbestellen; sie laufen bis zum Ende des bezahlten Zeitraums weiter.",
+        "Der Anbieter kann ein Abo mit einer Frist von vier Wochen zum Ende eines Abrechnungszeitraums kündigen. Das Recht beider Seiten zur außerordentlichen Kündigung aus wichtigem Grund bleibt unberührt.",
+        "Endet das Abo, bleibt das Konto im Lesemodus bestehen. Das Konto insgesamt kann der Kunde jederzeit per E-Mail auflösen; danach werden seine Daten gelöscht, soweit keine gesetzlichen Aufbewahrungspflichten bestehen. Der Kunde ist dafür verantwortlich, benötigte Daten vorher zu exportieren.",
       ],
     },
     {
@@ -155,7 +164,7 @@ const termsDe: LegalDoc = {
     {
       title: "Änderungen dieser AGB",
       body: [
-        "Der Anbieter kann diese AGB mit Wirkung für die Zukunft ändern. Er teilt Änderungen mindestens vier Wochen vor ihrem Inkrafttreten per E-Mail mit. Widerspricht der Kunde nicht innerhalb dieser Frist, gelten die Änderungen als angenommen; auf diese Folge wird in der Mitteilung hingewiesen. Im Fall eines Widerspruchs kann jede Seite den Vertrag zum Inkrafttreten der Änderung kündigen.",
+        "Der Anbieter kann diese AGB mit Wirkung für die Zukunft ändern. Er teilt Änderungen mindestens vier Wochen vor ihrem Inkrafttreten per E-Mail mit. Widerspricht der Kunde nicht innerhalb dieser Frist, gelten die Änderungen als angenommen; auf diese Folge wird in der Mitteilung hingewiesen. Im Fall eines Widerspruchs kann jede Seite den Vertrag zum Inkrafttreten der Änderung kündigen. Das gilt auch für Preisänderungen laufender Abos; sie wirken ab dem ersten Abrechnungszeitraum nach Inkrafttreten.",
       ],
     },
     {
@@ -169,7 +178,7 @@ const termsDe: LegalDoc = {
 };
 
 const termsEn: LegalDoc = {
-  updated: "4 October 2026",
+  updated: "8 November 2026",
   intro: "This English version is provided for convenience. In case of any discrepancy, the German version prevails.",
   sections: [
     {
@@ -184,12 +193,13 @@ const termsEn: LegalDoc = {
       title: "Conclusion of contract",
       body: [
         "The presentation on the website is not a binding offer. The contract is concluded when the Provider accepts a customer request (e.g. a registration or early-access request) and activates access to the platform.",
+        "A paid subscription is concluded when the customer selects it in NovaDash under Settings → Billing and completes the payment on Stripe’s checkout page. The subscription terms shown in the process (price, billing period, trial, add-ons) form part of the contract.",
       ],
     },
     {
       title: "Services",
       body: [
-        "The Provider makes NovaDash available to the customer as web-based software (software as a service) over the internet. The scope of services follows from the agreed plan or individual agreement.",
+        "The Provider makes NovaDash available to the customer as web-based software (software as a service) over the internet. The scope of services follows from the subscription booked (base plan and add-ons such as the returns portal) or the individual agreement.",
         "NovaDash connects to third-party services (in particular marketplaces and shipping providers). Their availability, interfaces and terms are outside the Provider’s control. If a third party changes its interface, the Provider adapts the connection within a reasonable period; there is no entitlement to any particular integration.",
         "The Provider continuously develops NovaDash and may change features as long as the core contractual benefit is preserved. During the pilot and early-access phase, features may be limited or preliminary.",
       ],
@@ -220,15 +230,21 @@ const termsEn: LegalDoc = {
     {
       title: "Prices and payment",
       body: [
-        "The prices agreed at the conclusion of the contract apply. All prices are net plus statutory VAT; for customers in other EU member states with a valid VAT ID, the reverse-charge mechanism applies.",
-        "Billing is monthly in advance. Invoices are due within 14 days without deduction. If payment is more than 30 days overdue, the Provider may suspend access after prior notice.",
+        "The prices shown in NovaDash before the purchase apply. They include statutory VAT. For businesses with a valid VAT ID, the reverse-charge mechanism may apply; the amount then stays the same and contains no VAT.",
+        "Payment is processed through Stripe Managed Payments. Link (Sold through Link, LLC), a Stripe group company, handles the payment, the invoice and VAT and issues the invoice in its own name. Link’s terms for purchases “Sold through Link” (link.com/terms) additionally apply to the payment process.",
+        "Fees are charged in advance for the chosen billing period (month or year) to the payment method the customer provides on the checkout page, first at purchase or at the end of the trial. An add-on booked during a running period is charged immediately and pro rata for the rest of that period.",
+        "New customers can test NovaDash free of charge once for 14 days. The payment method is provided at the start. Unless the subscription is cancelled before the trial ends, it automatically converts into the chosen paid subscription; the first charge takes place at the end of the trial.",
+        "If a charge fails, it is retried over about two weeks and the customer is notified in NovaDash. If it does not succeed, the subscription ends and the account switches to read-only mode: viewing and exporting data remain possible, while syncs, labels and automated processes pause until a subscription exists again.",
+        "Paid periods are not refunded pro rata on cancellation or removal of an add-on. Link’s refund policy (support.link.com/questions/sold-through-link-refunds) and statutory claims remain unaffected.",
       ],
     },
     {
       title: "Term and termination",
       body: [
-        "Unless otherwise agreed, the contract runs for an indefinite period and may be terminated by either party at the end of any calendar month. Termination by email is sufficient. The right to terminate for good cause remains unaffected.",
-        "After the contract ends, the customer’s data is deleted unless statutory retention obligations apply. The customer is responsible for exporting any data it needs beforehand.",
+        "A subscription runs for the chosen billing period (month or year) and renews automatically for the same period at the same price unless cancelled before the period ends.",
+        "The customer may cancel at any time with effect from the end of the current period: in NovaDash under Settings → Billing → “Manage subscription”, via its Link account or by email to info@novadash.eu. The booked scope stays available until the end of the paid period. Add-ons such as the returns portal can be removed individually in NovaDash and remain active until the end of the paid period.",
+        "The Provider may cancel a subscription with four weeks’ notice to the end of a billing period. The right of both parties to terminate for good cause remains unaffected.",
+        "When the subscription ends, the account remains in read-only mode. The customer may close the account as a whole at any time by email; its data is then deleted unless statutory retention obligations apply. The customer is responsible for exporting any data it needs beforehand.",
       ],
     },
     {
@@ -248,7 +264,7 @@ const termsEn: LegalDoc = {
     {
       title: "Changes to these terms",
       body: [
-        "The Provider may amend these terms with effect for the future. It will announce changes by email at least four weeks before they take effect. If the customer does not object within this period, the changes are deemed accepted; the notice will point out this consequence. In case of objection, either party may terminate the contract as of the date the change takes effect.",
+        "The Provider may amend these terms with effect for the future. It will announce changes by email at least four weeks before they take effect. If the customer does not object within this period, the changes are deemed accepted; the notice will point out this consequence. In case of objection, either party may terminate the contract as of the date the change takes effect. This also applies to price changes for running subscriptions; they take effect from the first billing period after the change comes into force.",
       ],
     },
     {
