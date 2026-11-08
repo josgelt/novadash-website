@@ -368,3 +368,7 @@
   --color-surface: #FFFFFF;
 }
 :root[data-design="classic"] .nd-botanical-btn-accent { color: #FFFFFF; }
+
+/* Design B: no editorial italics on the token-themed subpages (Contact, Early Access, legal) */
+:root:not([data-design="classic"]) .nd-botanical .italic { font-style: normal; }
+:root:not([data-design="classic"]) .nd-botanical h1.font-serif { font-weight: 700; letter-spacing: -0.03em; }
